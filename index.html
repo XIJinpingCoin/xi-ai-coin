@@ -12,71 +12,91 @@ body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
-text-align:center;
-
-/* FONAS NEBUS IŠTEMPIAMAS */
-background-color:black;
-background-image:url("background.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-size:contain;
+background:black;
 }
 
-.container{
-padding:100px 20px;
-max-width:900px;
-margin:auto;
-background:rgba(0,0,0,0.65);
-border-radius:12px;
-margin-top:60px;
+/* HERO BACKGROUND */
+.hero{
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
+url("background.jpg");
+background-size:cover;
+background-position:center;
+padding:140px 20px;
+text-align:center;
 }
 
 h1{
-font-size:60px;
+font-size:70px;
+margin:0;
 letter-spacing:3px;
-margin-bottom:10px;
 }
 
 .subtitle{
 font-size:22px;
 color:#cccccc;
-margin-bottom:30px;
+margin-top:15px;
 }
 
-p{
-font-size:18px;
-color:#bbbbbb;
-line-height:1.6;
-}
-
-.button{
+.btn{
 display:inline-block;
-margin:15px;
-padding:15px 35px;
+margin:20px 10px;
+padding:16px 36px;
 background:#ff2b2b;
 color:white;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
 transition:0.3s;
+box-shadow:0 0 25px rgba(255,0,0,0.5);
 }
 
-.button:hover{
-background:#ff5555;
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 40px rgba(255,0,0,0.8);
+}
+
+.section{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.section p{
+color:#bbbbbb;
+font-size:18px;
+line-height:1.7;
+}
+
+.card{
+background:#111;
+padding:30px;
+margin:20px;
+border-radius:12px;
+display:inline-block;
+max-width:280px;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .wallet{
-margin-top:25px;
-padding:15px;
-background:rgba(255,255,255,0.05);
+margin-top:30px;
+padding:20px;
+background:#111;
 border-radius:10px;
 word-break:break-all;
-font-size:14px;
+color:#aaa;
 }
 
 footer{
-margin-top:60px;
-color:#888;
+text-align:center;
+padding:60px 20px;
+color:#777;
 }
 
 </style>
@@ -84,36 +104,92 @@ color:#888;
 
 <body>
 
-<div class="container">
+<!-- HERO -->
+<div class="hero">
 
 <h1>XI JINPING COIN</h1>
 
 <div class="subtitle">
-Community Driven • Early Stage • Crypto Movement
+Community Driven • Meme Culture • Early Movement
 </div>
 
-<p>
-XI JINPING Coin is an early community-driven crypto project.
-Development and launch preparation are ongoing together with supporters.
-</p>
-
-<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">
+<a class="btn" href="https://x.com/jinpingxi_coin?s=21" target="_blank">
 Follow on X
 </a>
 
-<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">
+<a class="btn" href="https://x.com/i/communities/2021142986625560737" target="_blank">
 Join Community
 </a>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+
+<h2>About The Project</h2>
+
+<p>
+XI JINPING Coin is a community-driven crypto movement created during the new era of internet culture and digital finance.
+The project focuses on organic growth, community participation and early adoption before official launch.
+</p>
+
+</div>
+
+<!-- WHY -->
+<div class="section">
+
+<h2>Why XI JINPING Coin?</h2>
+
+<div class="card">
+<h3>Community First</h3>
+<p>Built together with early supporters shaping the project direction.</p>
+</div>
+
+<div class="card">
+<h3>Early Stage</h3>
+<p>Opportunity to join before large visibility and expansion.</p>
+</div>
+
+<div class="card">
+<h3>Viral Potential</h3>
+<p>Meme culture + crypto narratives create strong organic growth.</p>
+</div>
+
+</div>
+
+<!-- ROADMAP -->
+<div class="section">
+
+<h2>Roadmap</h2>
+
+<p>
+Phase 1 — Community Growth & Website Launch<br><br>
+Phase 2 — Token Deployment & Marketing Expansion<br><br>
+Phase 3 — Listings & Ecosystem Development<br><br>
+Phase 4 — Global Community Scaling
+</p>
+
+</div>
+
+<!-- SUPPORT -->
+<div class="section">
+
+<h2>Launch Preparation</h2>
+
+<p>
+Deployment and launch preparation are ongoing.
+Community support helps accelerate development and marketing.
+</p>
 
 <div class="wallet">
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
-<footer>
-Early community builds the future.
-</footer>
-
 </div>
+
+<footer>
+© 2026 XI JINPING COIN — Early Community Movement
+</footer>
 
 </body>
 </html>
