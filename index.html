@@ -11,103 +11,114 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:black;
+background:radial-gradient(circle at top,#111,#000);
 color:white;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
-background:
-linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
-url("background.jpg");
-background-size:cover;
-background-position:center;
 text-align:center;
-padding:120px 20px;
+padding:140px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95));
 }
 
 h1{
-font-size:70px;
-letter-spacing:3px;
+font-size:72px;
+letter-spacing:4px;
 margin:0;
+text-shadow:0 0 25px rgba(255,0,0,0.6);
 }
 
 .subtitle{
-margin-top:15px;
+margin-top:20px;
 font-size:22px;
-color:#cccccc;
+color:#bbbbbb;
 }
 
 .coin{
-width:340px;
-max-width:85%;
 margin-top:40px;
-filter:drop-shadow(0 0 40px gold);
+width:320px;
+max-width:85%;
+display:none; /* atsiras kai įkelsi coin.png */
 }
 
 /* BUTTONS */
 .btn{
 display:inline-block;
-margin:20px 10px;
-padding:16px 36px;
+margin:25px 10px;
+padding:16px 38px;
 background:#ff2b2b;
 color:white;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
 transition:0.3s;
-box-shadow:0 0 25px rgba(255,0,0,0.6);
+box-shadow:0 0 30px rgba(255,0,0,0.6);
 }
 
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:0 0 45px rgba(255,0,0,0.9);
+transform:translateY(-4px);
+box-shadow:0 0 50px rgba(255,0,0,0.9);
 }
 
 /* SECTIONS */
 .section{
 max-width:1000px;
 margin:auto;
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 }
 
 .section h2{
-font-size:42px;
+font-size:44px;
 margin-bottom:20px;
 }
 
 .section p{
+color:#bfbfbf;
 font-size:18px;
-color:#bbbbbb;
 line-height:1.7;
 }
 
 /* CARDS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
 .card{
-display:inline-block;
 background:#111;
 padding:30px;
 margin:15px;
-border-radius:12px;
+border-radius:14px;
 max-width:280px;
 border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px rgba(255,0,0,0.3);
 }
 
 /* WALLET */
 .wallet{
 margin-top:30px;
-padding:20px;
-background:#111;
-border-radius:10px;
+padding:22px;
+background:#0b0b0b;
+border-radius:12px;
 word-break:break-all;
-color:#aaa;
+color:#888;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 footer{
 text-align:center;
 padding:60px 20px;
-color:#777;
+color:#666;
+font-size:14px;
 }
 
 </style>
@@ -124,7 +135,7 @@ color:#777;
 Community Driven • Meme Culture • Early Movement
 </div>
 
-<img src="coin.png" class="coin">
+<img src="coin.png" class="coin" id="coin">
 
 <br>
 
@@ -144,9 +155,9 @@ Join Community
 <h2>About The Project</h2>
 
 <p>
-XI JINPING Coin is a community-driven crypto movement built around internet culture,
-early adoption and organic growth. The project focuses on building a strong global
-community before full deployment and expansion.
+XI JINPING Coin is a community-powered crypto project inspired by internet culture,
+viral energy and early adoption. The goal is to build a strong global community
+before official deployment and expansion.
 </p>
 
 </div>
@@ -156,21 +167,24 @@ community before full deployment and expansion.
 
 <h2>Why XI JINPING Coin?</h2>
 
+<div class="cards">
+
 <div class="card">
 <h3>Community First</h3>
-<p>The project grows together with early supporters and contributors.</p>
+<p>Built together with early supporters shaping the future.</p>
 </div>
 
 <div class="card">
 <h3>Early Opportunity</h3>
-<p>Join before official deployment and large-scale exposure.</p>
+<p>Join before deployment and large-scale exposure.</p>
 </div>
 
 <div class="card">
-<h3>Viral Energy</h3>
-<p>Meme culture combined with crypto creates strong organic reach.</p>
+<h3>Viral Potential</h3>
+<p>Meme culture meets crypto growth dynamics.</p>
 </div>
 
+</div>
 </div>
 
 <!-- ROADMAP -->
@@ -179,10 +193,10 @@ community before full deployment and expansion.
 <h2>Roadmap</h2>
 
 <p>
-Phase 1 — Community Growth & Website Launch<br><br>
+Phase 1 — Website & Community Growth<br><br>
 Phase 2 — Token Deployment<br><br>
-Phase 3 — Marketing Expansion & Listings<br><br>
-Phase 4 — Global Community Scaling
+Phase 3 — Marketing Expansion<br><br>
+Phase 4 — Ecosystem Development
 </p>
 
 </div>
@@ -193,8 +207,8 @@ Phase 4 — Global Community Scaling
 <h2>Launch Preparation</h2>
 
 <p>
-Deployment and launch preparation are ongoing.
-Community support helps accelerate development and marketing.
+Deployment preparation is ongoing.
+Community support helps accelerate launch and development.
 </p>
 
 <div class="wallet">
@@ -204,7 +218,7 @@ BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
 <footer>
-© 2026 XI JINPING COIN — Community Powered
+© 2026 XI JINPING COIN — Community Powered Movement
 </footer>
 
 </body>
