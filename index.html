@@ -3,47 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>XI JINPING COIN</title>
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* ===== BASE ===== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:black;
 color:white;
-overflow-x:hidden;
 scroll-behavior:smooth;
 }
 
-/* ===== ANIMATED BACKGROUND GLOW ===== */
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:
-radial-gradient(circle at 20% 30%, rgba(255,0,0,0.15), transparent 40%),
-radial-gradient(circle at 80% 60%, rgba(255,0,0,0.1), transparent 40%);
-animation:moveGlow 12s linear infinite;
-z-index:-1;
-}
-
-@keyframes moveGlow{
-0%{transform:translate(0,0);}
-50%{transform:translate(-10%, -10%);}
-100%{transform:translate(0,0);}
-}
-
-/* ===== HERO ===== */
+/* ===== HERO SECTION ===== */
 .hero{
 height:100vh;
 background:url("background.jpg") center/cover no-repeat;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 position:relative;
 }
@@ -52,7 +31,11 @@ position:relative;
 position:absolute;
 width:100%;
 height:100%;
-background:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.85));
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.85)
+);
 }
 
 .content{
@@ -60,38 +43,31 @@ position:relative;
 z-index:2;
 max-width:900px;
 padding:20px;
-animation:fadeIn 2s ease;
+animation:fade 1.8s ease;
 }
 
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(40px);}
+@keyframes fade{
+from{opacity:0; transform:translateY(30px);}
 to{opacity:1; transform:translateY(0);}
 }
 
 /* ===== LOGO ===== */
 .logo{
-width:200px;
+width:190px;
 margin-bottom:5px;
-animation:logoFloat 4s ease-in-out infinite;
-}
-
-@keyframes logoFloat{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
 }
 
 /* ===== TITLE ===== */
 h1{
 font-size:64px;
-letter-spacing:5px;
+letter-spacing:4px;
 margin:10px 0;
-text-shadow:0 0 30px red;
+text-shadow:0 0 25px red;
 }
 
 /* ===== TEXT ===== */
 .description{
-font-size:21px;
+font-size:20px;
 opacity:0.9;
 margin-bottom:35px;
 }
@@ -105,28 +81,21 @@ border-radius:10px;
 text-decoration:none;
 font-weight:bold;
 color:white;
-background:linear-gradient(45deg,#ff0000,#990000);
-box-shadow:0 0 25px rgba(255,0,0,0.7);
-transition:0.35s;
+background:linear-gradient(45deg,#ff0000,#8b0000);
+box-shadow:0 0 20px rgba(255,0,0,0.7);
+transition:0.3s;
 }
 
 .button:hover{
-transform:scale(1.1);
-box-shadow:0 0 45px red;
+transform:scale(1.08);
+box-shadow:0 0 40px red;
 }
 
 /* ===== COUNTER ===== */
 .counter{
-margin-top:35px;
+margin-top:30px;
 font-size:22px;
 color:#ffd700;
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{opacity:0.6;}
-50%{opacity:1;}
-100%{opacity:0.6;}
 }
 
 /* ===== SECTIONS ===== */
@@ -140,17 +109,24 @@ background:#050505;
 font-size:42px;
 color:#ff0000;
 margin-bottom:20px;
-text-shadow:0 0 15px red;
+text-shadow:0 0 10px red;
 }
 
 .box{
 background:#111;
-max-width:650px;
+max-width:720px;
 margin:20px auto;
-padding:25px;
+padding:28px;
 border-radius:12px;
 box-shadow:0 0 25px rgba(255,0,0,0.25);
+line-height:1.6;
 word-break:break-all;
+}
+
+/* ===== SUPPORT BOX SPECIAL ===== */
+.support{
+border:1px solid rgba(255,0,0,0.5);
+box-shadow:0 0 35px rgba(255,0,0,0.4);
 }
 
 /* ===== FOOTER ===== */
@@ -158,7 +134,7 @@ footer{
 padding:25px;
 text-align:center;
 background:black;
-opacity:0.7;
+opacity:0.6;
 }
 
 </style>
@@ -177,79 +153,80 @@ opacity:0.7;
 <h1>XI JINPING COIN</h1>
 
 <p class="description">
-AI • Blockchain • Community Power<br>
-A viral digital movement entering the crypto space.
+AI Culture • Blockchain Innovation • Community Driven Movement<br>
+Building a powerful digital ecosystem powered by people.
 </p>
 
-<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">JOIN X</a>
-<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">COMMUNITY</a>
+<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">FOLLOW ON X</a>
+<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">JOIN COMMUNITY</a>
 
 <div class="counter">
-🔥 <span id="members">12438</span> HOLDERS JOINED
+🔥 <span id="members">12438</span> COMMUNITY MEMBERS
 </div>
 
 </div>
 </section>
-
 
 <!-- ABOUT -->
 <section class="section">
-<h2>ABOUT</h2>
+<h2>PROJECT VISION</h2>
 
 <div class="box">
-XI JINPING COIN is a community-driven crypto project combining
-AI culture, blockchain innovation and internet virality.
-The mission is to grow a strong global community and create
-a powerful decentralized movement.
+XI JINPING COIN is a community-focused digital project combining
+AI narrative, blockchain culture and viral internet energy.
+The goal is to grow an engaged global community and expand
+into a long-term decentralized ecosystem driven by supporters.
 </div>
 
 </section>
 
-
-<!-- TOKEN -->
+<!-- ROADMAP -->
 <section class="section">
-<h2>TOKEN INFO</h2>
+<h2>DEVELOPMENT PHASE</h2>
 
 <div class="box">
-<b>Contract Address:</b><br>
-BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
-</div>
-
-<div class="box">
-✔ Community Powered<br>
-✔ Fair Launch Vision<br>
-✔ AI + Meme Energy<br>
-✔ Expansion Phase Active
+Phase 1 — Community Growth & Awareness<br>
+Phase 2 — Website & Branding Expansion<br>
+Phase 3 — Deployment & Ecosystem Launch<br>
+Phase 4 — Partnerships & Exchange Expansion
 </div>
 
 </section>
 
-
-<!-- SUPPORT -->
+<!-- DEPLOY SUPPORT -->
 <section class="section">
 <h2>DEPLOY SUPPORT</h2>
 
+<div class="box support">
+The project is currently preparing for deployment and technical expansion.
+
+Community support helps cover infrastructure costs,
+development tools, deployment services and ecosystem growth.
+
+Every contribution directly accelerates the launch process
+and helps build a stronger foundation for the project.
+</div>
+
 <div class="box">
-The project is currently in expansion and deployment phase.
-Community support helps accelerate development,
-exchange listings and ecosystem growth.
+<b>Support Address:</b><br><br>
+BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
 </section>
 
 <footer>
-© 2025 XI JINPING COIN — Community Movement
+© 2025 XI JINPING COIN — Community Powered Project
 </footer>
-
 
 <script>
 let num = 12438;
 setInterval(()=>{
-num += Math.floor(Math.random()*3);
+num += Math.floor(Math.random()*2);
 document.getElementById("members").innerText =
 num.toLocaleString();
-},3000);
+},4000);
 </script>
 
 </body>
 </html>
+
