@@ -7,19 +7,17 @@
 
 <style>
 
-/* ===== BASE ===== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:black;
 color:white;
-scroll-behavior:smooth;
+background:black;
 }
 
-/* ===== HERO SECTION ===== */
+/* HERO */
 .hero{
 height:100vh;
-background:url("background.jpg") center/cover no-repeat;
+background:url("background.jpg") center/cover no-repeat fixed;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -33,108 +31,82 @@ width:100%;
 height:100%;
 background:linear-gradient(
 to bottom,
-rgba(0,0,0,0.35),
-rgba(0,0,0,0.85)
+rgba(0,0,0,0.3),
+rgba(0,0,0,0.8)
 );
 }
 
 .content{
 position:relative;
 z-index:2;
-max-width:900px;
+max-width:850px;
 padding:20px;
-animation:fade 1.8s ease;
 }
 
-@keyframes fade{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-/* ===== LOGO ===== */
 .logo{
-width:190px;
-margin-bottom:5px;
+width:170px;
+margin-bottom:10px;
 }
 
-/* ===== TITLE ===== */
 h1{
-font-size:64px;
-letter-spacing:4px;
+font-size:58px;
+letter-spacing:3px;
 margin:10px 0;
-text-shadow:0 0 25px red;
+text-shadow:0 0 20px red;
 }
 
-/* ===== TEXT ===== */
 .description{
 font-size:20px;
 opacity:0.9;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
-/* ===== BUTTONS ===== */
 .button{
 display:inline-block;
-padding:16px 38px;
-margin:10px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
+padding:14px 32px;
+margin:8px;
+background:#c40000;
 color:white;
-background:linear-gradient(45deg,#ff0000,#8b0000);
-box-shadow:0 0 20px rgba(255,0,0,0.7);
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
 transition:0.3s;
 }
 
 .button:hover{
-transform:scale(1.08);
-box-shadow:0 0 40px red;
+background:red;
+transform:scale(1.05);
 }
 
-/* ===== COUNTER ===== */
-.counter{
-margin-top:30px;
-font-size:22px;
-color:#ffd700;
-}
+/* SECTIONS */
 
-/* ===== SECTIONS ===== */
 .section{
-padding:90px 20px;
+padding:80px 20px;
 text-align:center;
-background:#050505;
+background:#070707;
 }
 
 .section h2{
-font-size:42px;
+font-size:38px;
 color:#ff0000;
 margin-bottom:20px;
-text-shadow:0 0 10px red;
 }
 
 .box{
-background:#111;
-max-width:720px;
+max-width:800px;
 margin:20px auto;
+background:#111;
 padding:28px;
-border-radius:12px;
-box-shadow:0 0 25px rgba(255,0,0,0.25);
-line-height:1.6;
-word-break:break-all;
+border-radius:10px;
+line-height:1.7;
+box-shadow:0 0 20px rgba(255,0,0,0.25);
 }
 
-/* ===== SUPPORT BOX SPECIAL ===== */
-.support{
-border:1px solid rgba(255,0,0,0.5);
-box-shadow:0 0 35px rgba(255,0,0,0.4);
-}
-
-/* ===== FOOTER ===== */
 footer{
 padding:25px;
 text-align:center;
 background:black;
-opacity:0.6;
+opacity:0.7;
 }
 
 </style>
@@ -153,80 +125,97 @@ opacity:0.6;
 <h1>XI JINPING COIN</h1>
 
 <p class="description">
-AI Culture • Blockchain Innovation • Community Driven Movement<br>
-Building a powerful digital ecosystem powered by people.
+Community driven digital project combining AI culture,
+blockchain innovation and global online communities.
 </p>
 
-<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">FOLLOW ON X</a>
-<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">JOIN COMMUNITY</a>
-
-<div class="counter">
-🔥 <span id="members">12438</span> COMMUNITY MEMBERS
-</div>
+<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">Follow on X</a>
+<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">Join Community</a>
 
 </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section">
-<h2>PROJECT VISION</h2>
+<h2>ABOUT THE PROJECT</h2>
 
 <div class="box">
-XI JINPING COIN is a community-focused digital project combining
-AI narrative, blockchain culture and viral internet energy.
-The goal is to grow an engaged global community and expand
-into a long-term decentralized ecosystem driven by supporters.
+XI JINPING COIN is an early-stage community project focused on building
+a strong online ecosystem around blockchain culture, AI trends and
+internet-driven communities.
+
+The project aims to unite supporters into a single movement where
+community participation becomes the main driving force behind growth,
+visibility and long-term development.
+
+Rather than focusing only on short-term hype, the goal is to create
+a recognizable digital brand supported by an active global audience.
 </div>
 
 </section>
 
-<!-- ROADMAP -->
+<!-- VISION -->
 <section class="section">
-<h2>DEVELOPMENT PHASE</h2>
+<h2>PROJECT VISION</h2>
 
 <div class="box">
-Phase 1 — Community Growth & Awareness<br>
-Phase 2 — Website & Branding Expansion<br>
-Phase 3 — Deployment & Ecosystem Launch<br>
-Phase 4 — Partnerships & Exchange Expansion
+The long-term vision is to expand beyond a simple token idea and evolve
+into a broader ecosystem powered by community engagement.
+
+Key goals include:
+<br><br>
+• Building a strong and active global community<br>
+• Expanding branding and online presence<br>
+• Developing partnerships and collaborations<br>
+• Creating sustainable long-term growth through supporters
+</div>
+
+</section>
+
+<!-- DEVELOPMENT -->
+<section class="section">
+<h2>DEVELOPMENT STAGE</h2>
+
+<div class="box">
+The project is currently in its growth and preparation phase.
+During this stage the focus is on community expansion,
+branding development and infrastructure preparation
+required for future deployment.
+
+Every stage is being built step by step to ensure
+a stable and organized launch process.
 </div>
 
 </section>
 
 <!-- DEPLOY SUPPORT -->
 <section class="section">
-<h2>DEPLOY SUPPORT</h2>
+<h2>DEPLOYMENT SUPPORT</h2>
 
-<div class="box support">
-The project is currently preparing for deployment and technical expansion.
+<div class="box">
+XI JINPING COIN is preparing for deployment and technical launch.
 
-Community support helps cover infrastructure costs,
-development tools, deployment services and ecosystem growth.
+Deployment requires infrastructure setup, development tools,
+platform fees, liquidity preparation and ongoing technical resources.
 
-Every contribution directly accelerates the launch process
-and helps build a stronger foundation for the project.
+Community support plays an important role in accelerating this phase.
+Contributions help move the project forward faster and allow the
+team to focus on building and expanding the ecosystem.
+
+Supporting the deployment means becoming part of the early
+growth stage of the project and helping bring the vision to reality.
 </div>
 
 <div class="box">
-<b>Support Address:</b><br><br>
+<b>Deployment Support Address:</b><br><br>
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
 </section>
 
 <footer>
-© 2025 XI JINPING COIN — Community Powered Project
+© 2025 XI JINPING COIN — Community Driven Project
 </footer>
-
-<script>
-let num = 12438;
-setInterval(()=>{
-num += Math.floor(Math.random()*2);
-document.getElementById("members").innerText =
-num.toLocaleString();
-},4000);
-</script>
 
 </body>
 </html>
-
