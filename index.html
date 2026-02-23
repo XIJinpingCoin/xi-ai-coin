@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>XI JINPING COIN</title>
 
 <style>
 
+/* ===== BODY / FONAS ===== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
 
-/* SENAS GRAŽUS FONAS */
+/* TAVO FONO NUOTRAUKA */
 background-image:url("background.png");
 background-size:cover;
 background-position:center;
@@ -20,114 +22,71 @@ background-repeat:no-repeat;
 background-attachment:fixed;
 }
 
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-color:white;
-background:black;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-background:url("background.jpg") center/cover no-repeat fixed;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
-}
-
+/* lengvas tamsinimas kad tekstas matytųsi */
 .overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,0.35),
-rgba(0,0,0,0.85)
-);
+background:rgba(0,0,0,0.45);
+min-height:100vh;
+text-align:center;
+padding:40px 20px;
 }
 
-.content{
-position:relative;
-z-index:2;
-max-width:850px;
-padding:20px;
-}
-
+/* ===== LOGO ===== */
 .logo{
-width:170px;
+width:260px;     /* LOGO DYDIS */
+max-width:80%;
 margin-bottom:10px;
 }
 
+/* ===== PAVADINIMAS ===== */
 h1{
-font-size:56px;
-letter-spacing:3px;
+font-size:48px;
 margin:10px 0;
-text-shadow:0 0 20px red;
+letter-spacing:3px;
 }
 
+/* ===== TEKSTAS ===== */
 .description{
-font-size:20px;
-opacity:0.9;
-margin-bottom:30px;
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
 }
 
+/* ===== BLOKAI ===== */
+.section{
+margin-top:40px;
+background:rgba(0,0,0,0.55);
+padding:25px;
+border-radius:12px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* ===== MYGTUKAI ===== */
 .button{
 display:inline-block;
-padding:14px 32px;
-margin:8px;
-background:#c40000;
-color:white;
+margin-top:15px;
+padding:12px 22px;
+background:gold;
+color:black;
 text-decoration:none;
-border-radius:8px;
 font-weight:bold;
-transition:0.3s;
+border-radius:8px;
 }
 
 .button:hover{
-background:red;
-transform:scale(1.05);
+opacity:0.85;
 }
 
-/* COMMUNITY COUNTER */
-.members{
-margin-top:25px;
-font-size:22px;
-color:#ffd700;
-letter-spacing:2px;
-text-shadow:0 0 12px rgba(255,215,0,0.8);
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+h1{
+font-size:32px;
 }
-
-/* SECTIONS */
-.section{
-padding:80px 20px;
-text-align:center;
-background:#070707;
+.logo{
+width:200px;
 }
-
-.section h2{
-font-size:38px;
-color:#ff0000;
-margin-bottom:20px;
-}
-
-.box{
-max-width:800px;
-margin:20px auto;
-background:#111;
-padding:28px;
-border-radius:10px;
-line-height:1.7;
-box-shadow:0 0 20px rgba(255,0,0,0.25);
-word-break:break-word;
-}
-
-footer{
-padding:25px;
-text-align:center;
-background:black;
-opacity:0.7;
 }
 
 </style>
@@ -135,116 +94,74 @@ opacity:0.7;
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-<div class="overlay"></div>
+<div class="overlay">
 
-<div class="content">
-
+<!-- LOGO -->
 <img src="logo.png" class="logo">
 
 <h1>XI JINPING COIN</h1>
 
-<p class="description">
-Community driven digital project combining AI culture,
-blockchain innovation and global online communities.
-</p>
-
-<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">Follow on X</a>
-<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">Join Community</a>
-
-<div class="members">
-🔥 <span id="memberCount">12438</span> COMMUNITY MEMBERS JOINING
+<div class="description">
+The next generation community meme & AI powered crypto project.
+Built for strong community, global reach and long-term growth.
 </div>
-
-</div>
-</section>
 
 <!-- ABOUT -->
-<section class="section">
-<h2>ABOUT THE PROJECT</h2>
+<div class="section">
+<h2>About The Project</h2>
 
-<div class="box">
-XI JINPING COIN is a community-focused digital initiative inspired by
-AI culture, blockchain technology and internet-driven movements.
+<p>
+XI JINPING COIN is a community-driven crypto project combining meme culture,
+AI narrative and blockchain technology. The goal is to build a strong,
+active and global crypto movement powered by early supporters.
+</p>
 
-The project focuses on building a strong global community first,
-creating visibility and long-term growth through participation,
-engagement and shared development goals.
+<p>
+The website will continue improving every day as the project grows.
+Early supporters and believers will be rewarded for joining early.
+</p>
+
 </div>
 
-</section>
+<!-- DEPLOY -->
+<div class="section">
+<h2>Project Deploy & Support</h2>
 
-<!-- VISION -->
-<section class="section">
-<h2>PROJECT VISION</h2>
+<p>
+This project is currently in active deployment and expansion phase.
+Community support helps accelerate development, marketing
+and ecosystem growth.
+</p>
 
-<div class="box">
-The long-term objective is to grow beyond a simple online trend
-and develop a recognizable digital ecosystem supported by its community.
+<p><b>Support Wallet (SOL):</b></p>
 
-Key priorities:
-<br><br>
-• Community expansion worldwide<br>
-• Strong branding and online presence<br>
-• Sustainable ecosystem growth<br>
-• Long-term development supported by early adopters
-</div>
-
-</section>
-
-<!-- DEVELOPMENT -->
-<section class="section">
-<h2>DEVELOPMENT STAGE</h2>
-
-<div class="box">
-The project is currently in the preparation and growth phase.
-During this stage the focus is on expanding the community,
-improving infrastructure and preparing technical deployment.
-
-Each step is built carefully to ensure a stable and organized launch.
-</div>
-
-</section>
-
-<!-- DEPLOY SUPPORT -->
-<section class="section">
-<h2>DEPLOYMENT SUPPORT</h2>
-
-<div class="box">
-XI JINPING COIN is preparing for deployment and ecosystem expansion.
-
-Deployment requires infrastructure setup, development tools,
-platform and service fees, liquidity preparation and ongoing
-technical resources.
-
-Community support helps accelerate this stage and allows the
-project to move forward faster while building a stronger foundation.
-
-Supporting deployment means becoming part of the early growth phase
-and helping bring the project vision into reality.
-</div>
-
-<div class="box">
-<b>Deployment Support Address:</b><br><br>
+<p style="word-break:break-all;">
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
+</p>
+
+<p>
+Early supporters play a key role in building the future of XI JINPING COIN.
+</p>
+
 </div>
 
-</section>
+<!-- SOCIAL -->
+<div class="section">
+<h2>Join Community</h2>
 
-<footer>
-© 2025 XI JINPING COIN — Community Driven Project
-</footer>
+<a class="button" href="https://x.com/jinpingxi_coin" target="_blank">
+Twitter (X)
+</a>
 
-<script>
-let members = 12438;
-const counter = document.getElementById("memberCount");
+<br><br>
 
-setInterval(() => {
-members += Math.floor(Math.random()*3);
-counter.textContent = members.toLocaleString();
-}, 4000);
-</script>
+<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">
+Community
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
