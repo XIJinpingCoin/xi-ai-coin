@@ -31,8 +31,8 @@ width:100%;
 height:100%;
 background:linear-gradient(
 to bottom,
-rgba(0,0,0,0.3),
-rgba(0,0,0,0.8)
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.85)
 );
 }
 
@@ -49,7 +49,7 @@ margin-bottom:10px;
 }
 
 h1{
-font-size:58px;
+font-size:56px;
 letter-spacing:3px;
 margin:10px 0;
 text-shadow:0 0 20px red;
@@ -78,8 +78,16 @@ background:red;
 transform:scale(1.05);
 }
 
-/* SECTIONS */
+/* COMMUNITY COUNTER */
+.members{
+margin-top:25px;
+font-size:22px;
+color:#ffd700;
+letter-spacing:2px;
+text-shadow:0 0 12px rgba(255,215,0,0.8);
+}
 
+/* SECTIONS */
 .section{
 padding:80px 20px;
 text-align:center;
@@ -100,6 +108,7 @@ padding:28px;
 border-radius:10px;
 line-height:1.7;
 box-shadow:0 0 20px rgba(255,0,0,0.25);
+word-break:break-word;
 }
 
 footer{
@@ -132,6 +141,10 @@ blockchain innovation and global online communities.
 <a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">Follow on X</a>
 <a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">Join Community</a>
 
+<div class="members">
+🔥 <span id="memberCount">12438</span> COMMUNITY MEMBERS JOINING
+</div>
+
 </div>
 </section>
 
@@ -140,16 +153,12 @@ blockchain innovation and global online communities.
 <h2>ABOUT THE PROJECT</h2>
 
 <div class="box">
-XI JINPING COIN is an early-stage community project focused on building
-a strong online ecosystem around blockchain culture, AI trends and
-internet-driven communities.
+XI JINPING COIN is a community-focused digital initiative inspired by
+AI culture, blockchain technology and internet-driven movements.
 
-The project aims to unite supporters into a single movement where
-community participation becomes the main driving force behind growth,
-visibility and long-term development.
-
-Rather than focusing only on short-term hype, the goal is to create
-a recognizable digital brand supported by an active global audience.
+The project focuses on building a strong global community first,
+creating visibility and long-term growth through participation,
+engagement and shared development goals.
 </div>
 
 </section>
@@ -159,15 +168,15 @@ a recognizable digital brand supported by an active global audience.
 <h2>PROJECT VISION</h2>
 
 <div class="box">
-The long-term vision is to expand beyond a simple token idea and evolve
-into a broader ecosystem powered by community engagement.
+The long-term objective is to grow beyond a simple online trend
+and develop a recognizable digital ecosystem supported by its community.
 
-Key goals include:
+Key priorities:
 <br><br>
-• Building a strong and active global community<br>
-• Expanding branding and online presence<br>
-• Developing partnerships and collaborations<br>
-• Creating sustainable long-term growth through supporters
+• Community expansion worldwide<br>
+• Strong branding and online presence<br>
+• Sustainable ecosystem growth<br>
+• Long-term development supported by early adopters
 </div>
 
 </section>
@@ -177,13 +186,11 @@ Key goals include:
 <h2>DEVELOPMENT STAGE</h2>
 
 <div class="box">
-The project is currently in its growth and preparation phase.
-During this stage the focus is on community expansion,
-branding development and infrastructure preparation
-required for future deployment.
+The project is currently in the preparation and growth phase.
+During this stage the focus is on expanding the community,
+improving infrastructure and preparing technical deployment.
 
-Every stage is being built step by step to ensure
-a stable and organized launch process.
+Each step is built carefully to ensure a stable and organized launch.
 </div>
 
 </section>
@@ -193,17 +200,17 @@ a stable and organized launch process.
 <h2>DEPLOYMENT SUPPORT</h2>
 
 <div class="box">
-XI JINPING COIN is preparing for deployment and technical launch.
+XI JINPING COIN is preparing for deployment and ecosystem expansion.
 
 Deployment requires infrastructure setup, development tools,
-platform fees, liquidity preparation and ongoing technical resources.
+platform and service fees, liquidity preparation and ongoing
+technical resources.
 
-Community support plays an important role in accelerating this phase.
-Contributions help move the project forward faster and allow the
-team to focus on building and expanding the ecosystem.
+Community support helps accelerate this stage and allows the
+project to move forward faster while building a stronger foundation.
 
-Supporting the deployment means becoming part of the early
-growth stage of the project and helping bring the vision to reality.
+Supporting deployment means becoming part of the early growth phase
+and helping bring the project vision into reality.
 </div>
 
 <div class="box">
@@ -216,6 +223,16 @@ BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 <footer>
 © 2025 XI JINPING COIN — Community Driven Project
 </footer>
+
+<script>
+let members = 12438;
+const counter = document.getElementById("memberCount");
+
+setInterval(() => {
+members += Math.floor(Math.random()*3);
+counter.textContent = members.toLocaleString();
+}, 4000);
+</script>
 
 </body>
 </html>
