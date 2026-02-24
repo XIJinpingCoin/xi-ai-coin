@@ -6,7 +6,10 @@
 <title>XI JINPING COIN</title>
 
 <style>
-
+.logo:hover{
+transform:scale(1.05);
+transition:0.4s;
+}
 /* ===== BODY ===== */
 body{
 margin:0;
@@ -112,7 +115,7 @@ scroll-behavior:smooth;
 
 <div class="title">XI JINPING COIN</div>
 
-<div class="status">
+<p>Phase: Community Growth → Deployment → Expansion</p>
 <p>🟢 Project Status: ACTIVE</p>
 <p>🚧 Deployment Preparation Phase</p>
 <p id="supporters">👥 128 Early Supporters Joined</p>
@@ -213,6 +216,47 @@ document.getElementById("supporters").innerText =
 "👥 " + supporters + " Early Supporters Joined";
 }, 9000);
 </script>
+<!-- LIVE ACTIVITY POPUP -->
+<div id="livePopup"></div>
 
+<style>
+#livePopup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:rgba(0,0,0,0.75);
+padding:14px 18px;
+border-radius:10px;
+font-size:14px;
+opacity:0;
+transition:0.5s;
+box-shadow:0 0 15px gold;
+}
+</style>
+
+<script>
+const messages = [
+"🚀 Alex joined the community",
+"🔥 New supporter connected",
+"👥 Member joined from Europe",
+"⚡ Early supporter arrived",
+"🌍 New visitor exploring project",
+"💎 Community growing"
+];
+
+function showPopup(){
+const popup=document.getElementById("livePopup");
+popup.innerText =
+messages[Math.floor(Math.random()*messages.length)];
+
+popup.style.opacity="1";
+
+setTimeout(()=>{
+popup.style.opacity="0";
+},4000);
+}
+
+setInterval(showPopup,15000);
+</script>
 </body>
 </html>
