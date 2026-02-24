@@ -123,7 +123,7 @@ strong community and ecosystem expansion.
 </div>
 
 <div class="counter">
-👥 <span id="supporters">128</span> Early Supporters Joined
+<p id="supporters">👥 128 Early Supporters Joined</p>
 </div>
 
 <!-- ABOUT -->
@@ -196,7 +196,15 @@ count += Math.floor(Math.random()*2);
 document.getElementById("supporters").innerText = count;
 },6000);
 </script>
+<script>
+let supporters = 128;
 
+setInterval(() => {
+  supporters++;
+  document.getElementById("supporters").innerText =
+    "👥 " + supporters + " Early Supporters Joined";
+}, 8000);
+</script>
 </body>
 </html>
 
