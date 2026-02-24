@@ -20,61 +20,61 @@ url("background.jpg") center/cover no-repeat fixed;
 
 /* ===== CONTAINER ===== */
 .container{
-padding:60px 20px;
+padding:70px 20px;
 }
 
 /* ===== LOGO ===== */
 .logo{
-width:220px;
-margin-bottom:10px;
+width:240px;
 filter:
-drop-shadow(0 0 15px gold)
-drop-shadow(0 0 30px orange);
+drop-shadow(0 0 20px gold)
+drop-shadow(0 0 40px orange);
 }
 
-/* ===== TITLE GLOW ===== */
+/* ===== TITLE ===== */
 .title{
-font-size:42px;
+font-size:44px;
 font-weight:bold;
 color:#FFD700;
-margin:10px 0;
+margin-top:15px;
 
 text-shadow:
 0 0 10px #FFD700,
-0 0 20px #FFD700,
-0 0 40px #ffaa00,
+0 0 25px #FFD700,
+0 0 45px #ffaa00,
 0 0 70px #ffaa00;
 }
 
 /* ===== STATUS BOX ===== */
 .status{
-margin-top:20px;
+margin-top:25px;
 background:rgba(0,0,0,0.45);
-padding:15px;
-border-radius:12px;
+padding:18px;
+border-radius:14px;
 display:inline-block;
 }
 
 /* ===== SECTIONS ===== */
 section{
-max-width:700px;
-margin:50px auto;
-line-height:1.6;
+max-width:800px;
+margin:60px auto;
+padding:0 20px;
+line-height:1.7;
 font-size:18px;
 }
 
 /* ===== DEPLOY BOX ===== */
 .deploy{
 background:rgba(0,0,0,0.45);
-padding:25px;
-border-radius:14px;
-box-shadow:0 0 25px rgba(255,215,0,0.25);
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 30px rgba(255,215,0,0.25);
 }
 
-/* ===== GOLD BUTTON ===== */
+/* ===== BUTTONS ===== */
 .button{
 display:inline-block;
-margin-top:20px;
+margin:10px;
 padding:14px 28px;
 background:gold;
 color:black;
@@ -85,11 +85,19 @@ transition:0.3s;
 }
 
 .button:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 box-shadow:0 0 20px gold;
 }
 
-/* ===== SMOOTH SCROLL ===== */
+/* ===== FOOTER ===== */
+footer{
+margin-top:60px;
+padding:20px;
+font-size:14px;
+opacity:0.8;
+}
+
+/* smooth scroll */
 html{
 scroll-behavior:smooth;
 }
@@ -101,18 +109,21 @@ scroll-behavior:smooth;
 
 <div class="container">
 
-<!-- LOGO -->
 <img src="logo.png" class="logo">
 
-<!-- TITLE -->
 <div class="title">XI JINPING COIN</div>
 
-<!-- LIVE STATUS -->
 <div class="status">
 <p>🟢 Project Status: ACTIVE</p>
 <p>🚧 Deployment Preparation Phase</p>
 <p id="supporters">👥 128 Early Supporters Joined</p>
 </div>
+
+<br><br>
+
+<!-- SOCIAL LINKS -->
+<a href="https://twitter.com/" class="button" target="_blank">Twitter / X</a>
+<a href="#" class="button">Community</a>
 
 </div>
 
@@ -121,14 +132,31 @@ scroll-behavior:smooth;
 <h2>About The Project</h2>
 
 <p>
-XI JINPING COIN is a community-driven AI & crypto experiment.
-The project focuses on building a strong early community
-while preparing infrastructure for deployment.
+XI JINPING COIN is a community-driven AI & crypto project focused on
+building a strong ecosystem before deployment.
+The goal is to combine internet culture, artificial intelligence
+and decentralized technology into a growing digital community.
 </p>
 
 <p>
-Development continues daily as the ecosystem grows step by step
-together with early supporters.
+The project evolves daily together with early supporters,
+creating a foundation designed for long-term growth.
+</p>
+
+</section>
+
+<!-- VISION -->
+<section>
+<h2>Project Vision</h2>
+
+<p>
+The vision is simple — build first, deploy strong.
+Instead of rushing launch, the project focuses on community,
+visibility and infrastructure preparation.
+</p>
+
+<p>
+Transparency, consistency and organic growth are the core principles.
 </p>
 </section>
 
@@ -137,34 +165,42 @@ together with early supporters.
 <h2>🚀 Deployment</h2>
 
 <p>
-Deployment preparation is currently in progress.
-The project is building its foundation before launch,
-focusing on stability, community growth and long-term vision.
+Deployment is currently being prepared carefully.
+Infrastructure, branding and community expansion are
+being developed step by step to ensure a stable launch.
 </p>
 
 <p>
-Early supporters play an important role in shaping the project
-and will be rewarded for being part of the beginning.
+Early supporters are part of the foundation and will be
+recognized for joining during the early phase.
+</p>
+
+<p>
+This phase allows the ecosystem to mature before entering
+the next stage of development.
 </p>
 </section>
 
 <!-- WHY -->
 <section>
-<h2>Why XI JINPING COIN?</h2>
+<h2>Why Join Early?</h2>
 
 <p>
-A community-powered crypto project combining internet culture,
-AI influence and decentralized innovation.
+Early stages offer the strongest opportunity to become
+part of the core community shaping the future of the project.
 </p>
 
 <p>
-Built step by step — transparent, growing and evolving every day.
+Growth happens step by step — those who arrive early
+help define the journey.
 </p>
-
-<a href="#" class="button">Join Early</a>
 </section>
 
-<!-- LIVE SUPPORTERS SCRIPT -->
+<footer>
+© 2026 XI JINPING COIN — Community Driven Project
+</footer>
+
+<!-- LIVE SUPPORTERS COUNTER -->
 <script>
 let supporters = 128;
 
