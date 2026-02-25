@@ -65,7 +65,6 @@ font-size:18px;
 line-height:1.6;
 }
 
-/* JOIN TEXT */
 .livejoin{
 margin-top:15px;
 font-size:16px;
@@ -79,7 +78,6 @@ animation:pulse 2s infinite;
 100%{opacity:0.6;}
 }
 
-/* SECTIONS */
 .section{
 margin-top:40px;
 background:rgba(0,0,0,0.55);
@@ -125,7 +123,65 @@ font-size:14px;
 color:#aaa;
 }
 
-/* FOOTER */
+/* FUNDING */
+.funding-box{
+margin-top:20px;
+padding:20px;
+background:rgba(0,0,0,0.65);
+border-radius:12px;
+box-shadow:0 0 20px rgba(255,215,0,0.25);
+}
+
+.progress-bar{
+width:100%;
+height:18px;
+background:rgba(255,255,255,0.15);
+border-radius:10px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-fill{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,gold,#FFD700);
+box-shadow:0 0 15px gold;
+transition:width 1.2s ease;
+}
+
+.funding-text{
+margin-top:10px;
+color:#FFD700;
+font-weight:bold;
+}
+
+/* DONATION TABLE */
+.donation-table{
+margin-top:20px;
+border-radius:12px;
+overflow:hidden;
+background:rgba(0,0,0,0.65);
+box-shadow:0 0 20px rgba(255,215,0,0.2);
+}
+
+.donation-row{
+display:flex;
+justify-content:space-between;
+padding:14px 18px;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.donation-row span{
+flex:1;
+text-align:center;
+}
+
+.donation-row.header{
+background:rgba(255,215,0,0.15);
+font-weight:bold;
+color:#FFD700;
+}
+
 .footer{
 margin-top:60px;
 font-size:14px;
@@ -169,42 +225,98 @@ strong community and ecosystem expansion.
 <!-- ABOUT -->
 <div class="section">
 <h2>About The Project</h2>
-
 <p>
 XI JINPING COIN is a community-powered crypto initiative combining AI narrative,
 meme culture and blockchain innovation.
 </p>
-
 <p>
 Early supporters are helping build the ecosystem foundation from the very beginning.
 </p>
-
 </div>
 
 <!-- ROADMAP -->
 <div class="section">
 <h2>Roadmap</h2>
-
 <p>✅ Phase 1 — Website Launch</p>
 <p>🚀 Phase 2 — Community Expansion</p>
 <p>⚙️ Phase 3 — Token Launch</p>
 <p>🌍 Phase 4 — Ecosystem Growth</p>
-
 </div>
 
 <!-- LAUNCH -->
 <div class="section">
 <h2>🚀 Official Launch Coming Soon</h2>
-
 <p>
 The project is preparing for its official launch.
 Community growth and ecosystem development are actively progressing.
 </p>
-
 <p>
 Stay early — early supporters will be rewarded.
 </p>
+</div>
 
+<!-- DEPLOY -->
+<div class="section">
+<h2>🚀 Deployment & Community Support</h2>
+
+<p>
+Community support helps accelerate development and ecosystem growth
+before official launch.
+</p>
+
+<div class="funding-box">
+<p><b>Community Funding Progress</b></p>
+
+<div class="progress-bar">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+
+<p class="funding-text">
+Raised: 10 SOL / Goal: 100 SOL
+</p>
+</div>
+
+<br>
+
+<p><b>Official Support Wallet (SOL)</b></p>
+
+<p style="word-break:break-all; color:#FFD700;">
+BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
+</p>
+
+</div>
+
+<!-- DONATIONS -->
+<div class="section">
+<h2>💎 Recent Community Support</h2>
+
+<div class="donation-table">
+
+<div class="donation-row header">
+<span>Supporter</span>
+<span>Amount</span>
+<span>Network</span>
+</div>
+
+<div class="donation-row">
+<span>Early Supporter</span>
+<span>2.5 SOL</span>
+<span>Solana</span>
+</div>
+
+<div class="donation-row">
+<span>Community Member</span>
+<span>1.2 SOL</span>
+<span>Solana</span>
+</div>
+
+<div class="donation-row">
+<span>Anonymous</span>
+<span>0.8 SOL</span>
+<span>Solana</span>
+</div>
+
+</div>
 </div>
 
 <!-- COMMUNITY -->
@@ -235,6 +347,11 @@ setInterval(()=>{
 count += Math.floor(Math.random()*2);
 document.getElementById("supporters").innerText = count;
 },6000);
+
+const raised = 10;
+const goal = 100;
+const percent = (raised/goal)*100;
+document.getElementById("progressFill").style.width = percent+"%";
 </script>
 
 </body>
