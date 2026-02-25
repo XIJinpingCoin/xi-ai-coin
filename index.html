@@ -3,137 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>XI JINPING COIN</title>
 
 <style>
 
-/* ===== PAGE LOAD ===== */
+/* ===== BODY / SENAS FONAS ===== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
 text-align:center;
-animation:fadeIn 1.5s ease-in-out;
-background:
-linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),
-url("background.jpg") center/cover no-repeat fixed;
+
+/* SENAS FONAS */
+background:url("background.jpg") no-repeat center center fixed;
+background-size:cover;
 }
 
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-/* ===== CONTAINER ===== */
-.container{
-padding:70px 20px;
+/* tamsus overlay kad tekstas matytųsi */
+.overlay{
+background:rgba(0,0,0,0.65);
+min-height:100vh;
+padding:40px 20px;
 }
 
 /* ===== LOGO ===== */
 .logo{
-width:240px;
-filter:
-drop-shadow(0 0 20px gold)
-drop-shadow(0 0 45px orange);
-transition:0.4s;
-}
-
-.logo:hover{
-transform:scale(1.05);
+width:180px;
+margin-top:20px;
+filter:drop-shadow(0 0 20px gold);
 }
 
 /* ===== TITLE ===== */
-.title{
-font-size:44px;
-font-weight:bold;
+h1{
+font-size:48px;
+margin:15px 0;
 color:#FFD700;
-margin-top:15px;
 text-shadow:
-0 0 10px #FFD700,
-0 0 25px #FFD700,
-0 0 50px #ffaa00,
-0 0 80px #ffaa00;
+0 0 10px gold,
+0 0 25px gold,
+0 0 45px rgba(255,215,0,0.8);
 }
 
-/* ===== STATUS ===== */
-.status{
-margin-top:25px;
-background:rgba(0,0,0,0.45);
-padding:18px;
-border-radius:14px;
-display:inline-block;
+/* ===== TEXT ===== */
+p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+line-height:1.6;
 }
 
 /* ===== BUTTONS ===== */
-.button{
+.btn{
 display:inline-block;
-margin:10px;
+margin:15px 10px;
 padding:14px 28px;
-background:gold;
-color:black;
-font-weight:bold;
+border-radius:10px;
 text-decoration:none;
-border-radius:8px;
+color:black;
+background:gold;
+font-weight:bold;
 transition:0.3s;
 }
 
-.button:hover{
-transform:scale(1.07);
+.btn:hover{
+transform:scale(1.05);
 box-shadow:0 0 20px gold;
 }
 
-/* ===== SECTIONS ===== */
-section{
+/* ===== INFO BOX ===== */
+.box{
+margin-top:40px;
+padding:25px;
+background:rgba(0,0,0,0.6);
+border-radius:15px;
+backdrop-filter:blur(10px);
 max-width:800px;
-margin:60px auto;
-padding:0 20px;
-line-height:1.7;
-font-size:18px;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 0 20px rgba(255,215,0,0.25);
 }
 
-/* ===== ROADMAP ===== */
-.roadmap{
-background:rgba(0,0,0,0.45);
+/* ===== LAUNCH BOX (NAUJA) ===== */
+.launch-box{
+margin-top:40px;
 padding:30px;
 border-radius:15px;
-box-shadow:0 0 25px rgba(255,215,0,0.25);
+background:rgba(0,0,0,0.65);
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,215,0,0.35);
+animation: glowPulse 3s infinite alternate;
 }
 
-/* ===== LIVE POPUP ===== */
-#livePopup{
-position:fixed;
-bottom:20px;
-left:20px;
-background:rgba(0,0,0,0.8);
-padding:14px 18px;
-border-radius:10px;
-font-size:14px;
-opacity:0;
-transition:0.5s;
-box-shadow:0 0 15px gold;
+@keyframes glowPulse{
+from{ box-shadow:0 0 15px rgba(255,215,0,0.2); }
+to{ box-shadow:0 0 35px rgba(255,215,0,0.6); }
 }
 
-/* ===== GOLD PARTICLES ===== */
-#particles{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-z-index:-1;
-}
-
-/* ===== FOOTER ===== */
-footer{
-margin-top:60px;
-padding:20px;
-font-size:14px;
-opacity:0.8;
-}
-
-html{
-scroll-behavior:smooth;
+/* ===== SUPPORTERS ===== */
+.counter{
+margin-top:30px;
+font-size:20px;
+color:#FFD700;
+text-shadow:0 0 10px gold;
 }
 
 </style>
@@ -141,157 +113,55 @@ scroll-behavior:smooth;
 
 <body>
 
-<canvas id="particles"></canvas>
-
-<div class="container">
+<div class="overlay">
 
 <img src="logo.png" class="logo">
 
-<div class="title">XI JINPING COIN</div>
+<h1>XI JINPING COIN</h1>
 
-<div class="status">
-<p>🟢 Project Status: ACTIVE</p>
-<p>Phase: Community Growth</p>
-<p id="supporters">👥 128 Early Supporters Joined</p>
-<p id="visitors">👀 12 visitors online</p>
+<p>
+Community-driven AI & crypto project building a strong ecosystem powered by people.
+Our mission is to unite community, AI innovation and meme culture into one growing movement.
+</p>
+
+<!-- BUTTONS -->
+<div>
+<a class="btn" href="https://x.com/jinpingxi_coin?s=21" target="_blank">Twitter</a>
+<a class="btn" href="https://x.com/i/communities/2021142986625560737" target="_blank">Community</a>
 </div>
 
+<div class="counter">
+👥 128 Early Supporters Joined
+</div>
+
+<!-- ===== LAUNCH SECTION (NAUJA) ===== -->
+<div class="launch-box">
+<h2>🚀 Token Launch Coming Soon</h2>
+
+<p>
+XI JINPING COIN is currently in the final preparation stage.
+The ecosystem and community are growing every day.
 <br><br>
-
-<a href="https://x.com/jinpingxi_coin?s=21" class="button" target="_blank">Follow on X</a>
-
-<a href="https://x.com/i/communities/2021142986625560737"
-class="button" target="_blank">Join Community</a>
-
+Official token launch is coming soon.
+Stay early — early supporters will be rewarded.
+</p>
 </div>
 
-<section>
+<!-- ===== ABOUT PROJECT ===== -->
+<div class="box">
 <h2>About The Project</h2>
 
 <p>
-XI JINPING COIN is a community-driven AI & crypto project focused on
-organic growth and long-term ecosystem building.
-The project evolves together with its community, combining internet culture,
-AI innovation and decentralized technology.
+XI JINPING COIN is a community-powered crypto initiative focused on growth,
+engagement and long-term ecosystem development.
+<br><br>
+The project evolves together with its supporters, combining AI ideas,
+crypto culture and strong community energy.
 </p>
 
-<p>
-The focus is building strong foundations first — community,
-visibility and long-term sustainability.
-</p>
-</section>
+</div>
 
-<section>
-<h2>Vision</h2>
-
-<p>
-The project grows step by step together with early supporters.
-Consistency, transparency and community energy drive the ecosystem forward.
-</p>
-
-<p>
-Every early supporter becomes part of the story from the beginning.
-</p>
-</section>
-
-<section class="roadmap">
-<h2>Roadmap</h2>
-
-<p>✅ Phase 1 — Community Creation</p>
-<p>✅ Phase 2 — Website & Branding</p>
-<p>🟡 Phase 3 — Ecosystem Expansion</p>
-<p>⬜ Phase 4 — Deployment Preparation</p>
-<p>⬜ Phase 5 — Growth & Expansion</p>
-</section>
-
-<footer>
-© 2026 XI JINPING COIN — Community Driven Project
-</footer>
-
-<div id="livePopup"></div>
-
-<script>
-
-/* SUPPORTERS COUNTER */
-let supporters=128;
-setInterval(()=>{
-supporters++;
-document.getElementById("supporters").innerText=
-"👥 "+supporters+" Early Supporters Joined";
-},9000);
-
-/* VISITORS COUNTER */
-let visitors=12;
-setInterval(()=>{
-visitors+=Math.floor(Math.random()*3-1);
-if(visitors<8) visitors=8;
-if(visitors>25) visitors=25;
-
-document.getElementById("visitors").innerText=
-"👀 "+visitors+" visitors online";
-},5000);
-
-/* LIVE POPUPS */
-const messages=[
-"🚀 New member joined",
-"🔥 Community growing",
-"👥 Supporter connected",
-"🌍 Visitor exploring project",
-"⚡ Early adopter arrived",
-"💎 Community expanding"
-];
-
-function showPopup(){
-const popup=document.getElementById("livePopup");
-popup.innerText=
-messages[Math.floor(Math.random()*messages.length)];
-popup.style.opacity="1";
-setTimeout(()=>{popup.style.opacity="0";},4000);
-}
-setInterval(showPopup,15000);
-
-/* GOLD PARTICLES */
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let particles=[];
-for(let i=0;i<40;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2+1,
-d:Math.random()*1
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="rgba(255,215,0,0.6)";
-ctx.beginPath();
-
-particles.forEach(p=>{
-ctx.moveTo(p.x,p.y);
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
-});
-
-ctx.fill();
-
-particles.forEach(p=>{
-p.y+=p.d;
-if(p.y>canvas.height){
-p.y=0;
-p.x=Math.random()*canvas.width;
-}
-});
-}
-
-setInterval(draw,33);
-
-</script>
+</div>
 
 </body>
 </html>
-
