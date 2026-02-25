@@ -7,15 +7,21 @@
 
 <style>
 
-/* ===== BODY ===== */
+/* ===== PAGE LOAD ===== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
 text-align:center;
+animation:fadeIn 1.5s ease-in-out;
 background:
 linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),
 url("background.jpg") center/cover no-repeat fixed;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
 
 /* ===== CONTAINER ===== */
@@ -98,13 +104,24 @@ box-shadow:0 0 25px rgba(255,215,0,0.25);
 position:fixed;
 bottom:20px;
 left:20px;
-background:rgba(0,0,0,0.75);
+background:rgba(0,0,0,0.8);
 padding:14px 18px;
 border-radius:10px;
 font-size:14px;
 opacity:0;
 transition:0.5s;
 box-shadow:0 0 15px gold;
+}
+
+/* ===== GOLD PARTICLES ===== */
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
 }
 
 /* ===== FOOTER ===== */
@@ -124,6 +141,8 @@ scroll-behavior:smooth;
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <div class="container">
 
 <img src="logo.png" class="logo">
@@ -134,6 +153,7 @@ scroll-behavior:smooth;
 <p>🟢 Project Status: ACTIVE</p>
 <p>Phase: Community Growth</p>
 <p id="supporters">👥 128 Early Supporters Joined</p>
+<p id="visitors">👀 12 visitors online</p>
 </div>
 
 <br><br>
@@ -145,39 +165,35 @@ class="button" target="_blank">Join Community</a>
 
 </div>
 
-<!-- ABOUT -->
 <section>
 <h2>About The Project</h2>
 
 <p>
 XI JINPING COIN is a community-driven AI & crypto project focused on
 organic growth and long-term ecosystem building.
-The project evolves together with its community, combining
-internet culture, artificial intelligence and decentralized innovation.
+The project evolves together with its community, combining internet culture,
+AI innovation and decentralized technology.
 </p>
 
 <p>
-Instead of rushing development, the focus remains on building a strong,
-active and loyal community before entering future stages.
+The focus is building strong foundations first — community,
+visibility and long-term sustainability.
 </p>
 </section>
 
-<!-- VISION -->
 <section>
 <h2>Vision</h2>
 
 <p>
-The vision is to grow step by step, allowing the community
-to become the foundation of the project’s future.
-Consistency, visibility and community energy drive the ecosystem forward.
+The project grows step by step together with early supporters.
+Consistency, transparency and community energy drive the ecosystem forward.
 </p>
 
 <p>
-Every early supporter becomes part of the story from the very beginning.
+Every early supporter becomes part of the story from the beginning.
 </p>
 </section>
 
-<!-- ROADMAP -->
 <section class="roadmap">
 <h2>Roadmap</h2>
 
@@ -186,28 +202,36 @@ Every early supporter becomes part of the story from the very beginning.
 <p>🟡 Phase 3 — Ecosystem Expansion</p>
 <p>⬜ Phase 4 — Deployment Preparation</p>
 <p>⬜ Phase 5 — Growth & Expansion</p>
-
 </section>
 
 <footer>
 © 2026 XI JINPING COIN — Community Driven Project
 </footer>
 
-<!-- SUPPORTER COUNTER -->
-<script>
-let supporters = 128;
-
-setInterval(() => {
-supporters++;
-document.getElementById("supporters").innerText =
-"👥 " + supporters + " Early Supporters Joined";
-}, 9000);
-</script>
-
-<!-- LIVE ACTIVITY -->
 <div id="livePopup"></div>
 
 <script>
+
+/* SUPPORTERS COUNTER */
+let supporters=128;
+setInterval(()=>{
+supporters++;
+document.getElementById("supporters").innerText=
+"👥 "+supporters+" Early Supporters Joined";
+},9000);
+
+/* VISITORS COUNTER */
+let visitors=12;
+setInterval(()=>{
+visitors+=Math.floor(Math.random()*3-1);
+if(visitors<8) visitors=8;
+if(visitors>25) visitors=25;
+
+document.getElementById("visitors").innerText=
+"👀 "+visitors+" visitors online";
+},5000);
+
+/* LIVE POPUPS */
 const messages=[
 "🚀 New member joined",
 "🔥 Community growing",
@@ -219,15 +243,55 @@ const messages=[
 
 function showPopup(){
 const popup=document.getElementById("livePopup");
-popup.innerText =
+popup.innerText=
 messages[Math.floor(Math.random()*messages.length)];
 popup.style.opacity="1";
-
 setTimeout(()=>{popup.style.opacity="0";},4000);
 }
-
 setInterval(showPopup,15000);
+
+/* GOLD PARTICLES */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+for(let i=0;i<40;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2+1,
+d:Math.random()*1
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="rgba(255,215,0,0.6)";
+ctx.beginPath();
+
+particles.forEach(p=>{
+ctx.moveTo(p.x,p.y);
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
+});
+
+ctx.fill();
+
+particles.forEach(p=>{
+p.y+=p.d;
+if(p.y>canvas.height){
+p.y=0;
+p.x=Math.random()*canvas.width;
+}
+});
+}
+
+setInterval(draw,33);
+
 </script>
 
 </body>
 </html>
+
