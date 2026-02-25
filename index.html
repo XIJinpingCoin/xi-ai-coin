@@ -6,10 +6,7 @@
 <title>XI JINPING COIN</title>
 
 <style>
-.logo:hover{
-transform:scale(1.05);
-transition:0.4s;
-}
+
 /* ===== BODY ===== */
 body{
 margin:0;
@@ -32,6 +29,11 @@ width:240px;
 filter:
 drop-shadow(0 0 20px gold)
 drop-shadow(0 0 45px orange);
+transition:0.4s;
+}
+
+.logo:hover{
+transform:scale(1.05);
 }
 
 /* ===== TITLE ===== */
@@ -83,13 +85,26 @@ line-height:1.7;
 font-size:18px;
 }
 
-/* ===== DEPLOY BOX ===== */
-.deploy{
+/* ===== ROADMAP ===== */
+.roadmap{
 background:rgba(0,0,0,0.45);
 padding:30px;
 border-radius:15px;
-box-shadow:0 0 30px rgba(255,215,0,0.25);
-word-break:break-all;
+box-shadow:0 0 25px rgba(255,215,0,0.25);
+}
+
+/* ===== LIVE POPUP ===== */
+#livePopup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:rgba(0,0,0,0.75);
+padding:14px 18px;
+border-radius:10px;
+font-size:14px;
+opacity:0;
+transition:0.5s;
+box-shadow:0 0 15px gold;
 }
 
 /* ===== FOOTER ===== */
@@ -115,15 +130,14 @@ scroll-behavior:smooth;
 
 <div class="title">XI JINPING COIN</div>
 
-<p>Phase: Community Growth → Deployment → Expansion</p>
+<div class="status">
 <p>🟢 Project Status: ACTIVE</p>
-<p>🚧 Deployment Preparation Phase</p>
+<p>Phase: Community Growth</p>
 <p id="supporters">👥 128 Early Supporters Joined</p>
 </div>
 
 <br><br>
 
-<!-- SOCIAL LINKS -->
 <a href="https://x.com/jinpingxi_coin?s=21" class="button" target="_blank">Follow on X</a>
 
 <a href="https://x.com/i/communities/2021142986625560737"
@@ -137,76 +151,49 @@ class="button" target="_blank">Join Community</a>
 
 <p>
 XI JINPING COIN is a community-driven AI & crypto project focused on
-building a strong ecosystem before deployment.
-The project combines internet culture, artificial intelligence
-and decentralized innovation.
+organic growth and long-term ecosystem building.
+The project evolves together with its community, combining
+internet culture, artificial intelligence and decentralized innovation.
 </p>
 
 <p>
-Development continues daily while the community grows organically.
-Early supporters help shape the future direction of the project.
+Instead of rushing development, the focus remains on building a strong,
+active and loyal community before entering future stages.
 </p>
-
 </section>
 
 <!-- VISION -->
 <section>
-<h2>Project Vision</h2>
+<h2>Vision</h2>
 
 <p>
-The goal is to build first and deploy strong.
-Infrastructure, branding and community strength are prioritized
-before launch to ensure long-term stability.
+The vision is to grow step by step, allowing the community
+to become the foundation of the project’s future.
+Consistency, visibility and community energy drive the ecosystem forward.
 </p>
 
 <p>
-Transparency, consistency and community power drive the project forward.
+Every early supporter becomes part of the story from the very beginning.
 </p>
 </section>
 
-<!-- DEPLOY SUPPORT -->
-<section class="deploy">
-<h2>🚀 Deployment Support</h2>
+<!-- ROADMAP -->
+<section class="roadmap">
+<h2>Roadmap</h2>
 
-<p>
-Deployment preparation is currently underway.
-Support from early community members helps accelerate
-development, infrastructure setup and ecosystem expansion.
-</p>
+<p>✅ Phase 1 — Community Creation</p>
+<p>✅ Phase 2 — Website & Branding</p>
+<p>🟡 Phase 3 — Ecosystem Expansion</p>
+<p>⬜ Phase 4 — Deployment Preparation</p>
+<p>⬜ Phase 5 — Growth & Expansion</p>
 
-<p>
-Early supporters are part of the foundation and will be
-recognized for joining at the beginning of the journey.
-</p>
-
-<p><strong>Support Wallet (Phantom / Solana):</strong></p>
-
-<p>
-BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
-</p>
-
-</section>
-
-<!-- WHY JOIN -->
-<section>
-<h2>Why Join Early?</h2>
-
-<p>
-Early stages offer the strongest opportunity to become part
-of a growing crypto community before deployment.
-</p>
-
-<p>
-Growth happens step by step — those who arrive early help
-define the future of the ecosystem.
-</p>
 </section>
 
 <footer>
 © 2026 XI JINPING COIN — Community Driven Project
 </footer>
 
-<!-- LIVE SUPPORTERS COUNTER -->
+<!-- SUPPORTER COUNTER -->
 <script>
 let supporters = 128;
 
@@ -216,47 +203,31 @@ document.getElementById("supporters").innerText =
 "👥 " + supporters + " Early Supporters Joined";
 }, 9000);
 </script>
-<!-- LIVE ACTIVITY POPUP -->
+
+<!-- LIVE ACTIVITY -->
 <div id="livePopup"></div>
 
-<style>
-#livePopup{
-position:fixed;
-bottom:20px;
-left:20px;
-background:rgba(0,0,0,0.75);
-padding:14px 18px;
-border-radius:10px;
-font-size:14px;
-opacity:0;
-transition:0.5s;
-box-shadow:0 0 15px gold;
-}
-</style>
-
 <script>
-const messages = [
-"🚀 Alex joined the community",
-"🔥 New supporter connected",
-"👥 Member joined from Europe",
-"⚡ Early supporter arrived",
-"🌍 New visitor exploring project",
-"💎 Community growing"
+const messages=[
+"🚀 New member joined",
+"🔥 Community growing",
+"👥 Supporter connected",
+"🌍 Visitor exploring project",
+"⚡ Early adopter arrived",
+"💎 Community expanding"
 ];
 
 function showPopup(){
 const popup=document.getElementById("livePopup");
 popup.innerText =
 messages[Math.floor(Math.random()*messages.length)];
-
 popup.style.opacity="1";
 
-setTimeout(()=>{
-popup.style.opacity="0";
-},4000);
+setTimeout(()=>{popup.style.opacity="0";},4000);
 }
 
 setInterval(showPopup,15000);
 </script>
+
 </body>
 </html>
