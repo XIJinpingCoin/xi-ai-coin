@@ -7,126 +7,134 @@
 
 <style>
 
+/* ===== BASE ===== */
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    color:white;
-    text-align:center;
-    background:url("background.jpg") no-repeat center center fixed;
-    background-size:cover;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:black;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+height:100vh;
+background:url("background.jpg") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
 }
 
 .overlay{
-    background:rgba(0,0,0,0.65);
-    min-height:100vh;
-    padding:40px 20px;
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.85)
+);
 }
 
-/* LOGO GLOW */
+.content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+animation:fade 1.8s ease;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== LOGO ===== */
 .logo{
-    width:170px;
-    animation: glow 2s infinite alternate;
+width:190px;
+margin-bottom:5px;
 }
 
-@keyframes glow{
-    from{ filter:drop-shadow(0 0 10px gold);}
-    to{ filter:drop-shadow(0 0 35px gold);}
-}
-
-/* TITLE */
+/* ===== TITLE ===== */
 h1{
-    font-size:48px;
-    margin:15px 0;
-    color:gold;
-    text-shadow:0 0 10px gold,0 0 25px gold;
+font-size:64px;
+letter-spacing:4px;
+margin:10px 0;
+text-shadow:0 0 25px red;
 }
 
-/* DESCRIPTION */
+/* ===== TEXT ===== */
 .description{
-    max-width:720px;
-    margin:auto;
-    font-size:18px;
-    line-height:1.6;
-    opacity:0.95;
+font-size:20px;
+opacity:0.9;
+margin-bottom:35px;
 }
 
-/* INFO CARDS */
-.cards{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    margin-top:40px;
+/* ===== BUTTONS ===== */
+.button{
+display:inline-block;
+padding:16px 38px;
+margin:10px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+background:linear-gradient(45deg,#ff0000,#8b0000);
+box-shadow:0 0 20px rgba(255,0,0,0.7);
+transition:0.3s;
 }
 
-.card{
-    background:rgba(0,0,0,0.6);
-    border:1px solid gold;
-    border-radius:12px;
-    padding:20px;
-    width:240px;
-    transition:0.3s;
+.button:hover{
+transform:scale(1.08);
+box-shadow:0 0 40px red;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 0 20px gold;
+/* ===== COUNTER ===== */
+.counter{
+margin-top:30px;
+font-size:22px;
+color:#ffd700;
 }
 
-/* LINKS */
-.links{
-    margin-top:35px;
+/* ===== SECTIONS ===== */
+.section{
+padding:90px 20px;
+text-align:center;
+background:#050505;
 }
 
-.links a{
-    display:inline-block;
-    margin:10px;
-    padding:14px 26px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    border:1px solid gold;
-    background:linear-gradient(45deg,#111,#333);
-    transition:0.3s;
+.section h2{
+font-size:42px;
+color:#ff0000;
+margin-bottom:20px;
+text-shadow:0 0 10px red;
 }
 
-.links a:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 20px gold;
+.box{
+background:#111;
+max-width:720px;
+margin:20px auto;
+padding:28px;
+border-radius:12px;
+box-shadow:0 0 25px rgba(255,0,0,0.25);
+line-height:1.6;
+word-break:break-all;
 }
 
-/* CONTRACT */
-.contract{
-    margin-top:40px;
-    background:rgba(0,0,0,0.6);
-    border:1px solid gold;
-    display:inline-block;
-    padding:15px 20px;
-    border-radius:10px;
-    font-size:14px;
-    word-break:break-all;
+/* ===== SUPPORT BOX SPECIAL ===== */
+.support{
+border:1px solid rgba(255,0,0,0.5);
+box-shadow:0 0 35px rgba(255,0,0,0.4);
 }
 
-/* STATUS BAR */
-.status{
-    margin-top:30px;
-    font-size:18px;
-    color:#00ff9f;
-    animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-    0%{opacity:0.6;}
-    50%{opacity:1;}
-    100%{opacity:0.6;}
-}
-
-/* FOOTER */
-.footer{
-    margin-top:60px;
-    opacity:0.7;
-    font-size:14px;
+/* ===== FOOTER ===== */
+footer{
+padding:25px;
+text-align:center;
+background:black;
+opacity:0.6;
 }
 
 </style>
@@ -134,70 +142,90 @@ h1{
 
 <body>
 
-<div class="overlay">
+<!-- HERO -->
+<section class="hero">
+<div class="overlay"></div>
+
+<div class="content">
 
 <img src="logo.png" class="logo">
 
 <h1>XI JINPING COIN</h1>
 
-<div class="description">
-A community-powered AI & crypto ecosystem focused on innovation,
-digital culture and long-term growth.<br><br>
-Built by the community. Driven by vision. Designed for the future.
-</div>
+<p class="description">
+AI Culture • Blockchain Innovation • Community Driven Movement<br>
+Building a powerful digital ecosystem powered by people.
+</p>
 
-<div class="status">
-🟢 Community Growing • Ecosystem Expanding
-</div>
+<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">FOLLOW ON X</a>
+<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">JOIN COMMUNITY</a>
 
-<!-- INFO BLOCKS -->
-<div class="cards">
-
-<div class="card">
-<h3>🤖 AI Vision</h3>
-<p>Exploring AI integration within crypto ecosystems and community innovation.</p>
-</div>
-
-<div class="card">
-<h3>🌍 Community First</h3>
-<p>Every supporter helps shape the direction and future of the project.</p>
-</div>
-
-<div class="card">
-<h3>🚀 Long-Term Goal</h3>
-<p>Building a recognizable digital ecosystem powered by holders.</p>
+<div class="counter">
+🔥 <span id="members">12438</span> COMMUNITY MEMBERS
 </div>
 
 </div>
+</section>
 
-<!-- LINKS -->
-<div class="links">
+<!-- ABOUT -->
+<section class="section">
+<h2>PROJECT VISION</h2>
 
-<a href="https://x.com/jinpingxi_coin?s=21" target="_blank">
-🐦 Official Twitter
-</a>
-
-<a href="https://x.com/i/communities/2021142986625560737" target="_blank">
-👥 Community
-</a>
-
-<a href="https://xijinpingcoin.github.io/xi-ai-coin/" target="_blank">
-🌐 Website
-</a>
-
+<div class="box">
+XI JINPING COIN is a community-focused digital project combining
+AI narrative, blockchain culture and viral internet energy.
+The goal is to grow an engaged global community and expand
+into a long-term decentralized ecosystem driven by supporters.
 </div>
 
-<!-- CONTRACT -->
-<div class="contract">
-<b>Contract Address:</b><br>
+</section>
+
+<!-- ROADMAP -->
+<section class="section">
+<h2>DEVELOPMENT PHASE</h2>
+
+<div class="box">
+Phase 1 — Community Growth & Awareness<br>
+Phase 2 — Website & Branding Expansion<br>
+Phase 3 — Deployment & Ecosystem Launch<br>
+Phase 4 — Partnerships & Exchange Expansion
+</div>
+
+</section>
+
+<!-- DEPLOY SUPPORT -->
+<section class="section">
+<h2>DEPLOY SUPPORT</h2>
+
+<div class="box support">
+The project is currently preparing for deployment and technical expansion.
+
+Community support helps cover infrastructure costs,
+development tools, deployment services and ecosystem growth.
+
+Every contribution directly accelerates the launch process
+and helps build a stronger foundation for the project.
+</div>
+
+<div class="box">
+<b>Support Address:</b><br><br>
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
 </div>
 
-<div class="footer">
-© 2025 XI JINPING COIN — Community Powered Ecosystem
-</div>
+</section>
 
-</div>
+<footer>
+© 2025 XI JINPING COIN — Community Powered Project
+</footer>
+
+<script>
+let num = 12438;
+setInterval(()=>{
+num += Math.floor(Math.random()*2);
+document.getElementById("members").innerText =
+num.toLocaleString();
+},4000);
+</script>
 
 </body>
 </html>
