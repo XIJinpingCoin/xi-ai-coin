@@ -7,134 +7,103 @@
 
 <style>
 
-/* ===== BASE ===== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:black;
 color:white;
-scroll-behavior:smooth;
+background-image:url("background.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 }
 
-/* ===== HERO SECTION ===== */
-.hero{
-height:100vh;
-background:url("background.jpg") center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
-}
-
+/* DARK OVERLAY */
 .overlay{
-position:absolute;
-width:100%;
-height:100%;
 background:linear-gradient(
 to bottom,
 rgba(0,0,0,0.35),
-rgba(0,0,0,0.85)
+rgba(0,0,0,0.65)
 );
+min-height:100vh;
+text-align:center;
+padding:40px 20px;
 }
 
-.content{
-position:relative;
-z-index:2;
-max-width:900px;
-padding:20px;
-animation:fade 1.8s ease;
-}
-
-@keyframes fade{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-/* ===== LOGO ===== */
+/* LOGO */
 .logo{
-width:190px;
+width:320px;
+max-width:90%;
 margin-bottom:5px;
+animation:logoGlow 3s ease-in-out infinite;
 }
 
-/* ===== TITLE ===== */
+@keyframes logoGlow{
+0%{filter:drop-shadow(0 0 10px gold);}
+50%{filter:drop-shadow(0 0 35px gold);}
+100%{filter:drop-shadow(0 0 10px gold);}
+}
+
+/* TITLE */
 h1{
-font-size:64px;
-letter-spacing:4px;
+font-size:52px;
 margin:10px 0;
-text-shadow:0 0 25px red;
+letter-spacing:4px;
+color:#FFD700;
+animation:titleGlow 3s ease-in-out infinite;
 }
 
-/* ===== TEXT ===== */
+@keyframes titleGlow{
+0%{text-shadow:0 0 10px gold,0 0 20px gold;}
+50%{text-shadow:0 0 25px gold,0 0 45px gold,0 0 70px gold;}
+100%{text-shadow:0 0 10px gold,0 0 20px gold;}
+}
+
 .description{
-font-size:20px;
-opacity:0.9;
-margin-bottom:35px;
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
 }
 
-/* ===== BUTTONS ===== */
+/* SECTIONS */
+.section{
+margin-top:40px;
+background:rgba(0,0,0,0.55);
+padding:25px;
+border-radius:12px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
 .button{
 display:inline-block;
-padding:16px 38px;
-margin:10px;
-border-radius:10px;
+margin-top:15px;
+padding:12px 22px;
+background:gold;
+color:black;
 text-decoration:none;
 font-weight:bold;
-color:white;
-background:linear-gradient(45deg,#ff0000,#8b0000);
-box-shadow:0 0 20px rgba(255,0,0,0.7);
-transition:0.3s;
+border-radius:8px;
 }
 
 .button:hover{
-transform:scale(1.08);
-box-shadow:0 0 40px red;
+opacity:0.85;
 }
 
-/* ===== COUNTER ===== */
+/* SUPPORTER COUNTER */
 .counter{
-margin-top:30px;
-font-size:22px;
-color:#ffd700;
+font-size:28px;
+color:#FFD700;
+margin-top:15px;
+font-weight:bold;
 }
 
-/* ===== SECTIONS ===== */
-.section{
-padding:90px 20px;
-text-align:center;
-background:#050505;
-}
-
-.section h2{
-font-size:42px;
-color:#ff0000;
-margin-bottom:20px;
-text-shadow:0 0 10px red;
-}
-
-.box{
-background:#111;
-max-width:720px;
-margin:20px auto;
-padding:28px;
-border-radius:12px;
-box-shadow:0 0 25px rgba(255,0,0,0.25);
-line-height:1.6;
-word-break:break-all;
-}
-
-/* ===== SUPPORT BOX SPECIAL ===== */
-.support{
-border:1px solid rgba(255,0,0,0.5);
-box-shadow:0 0 35px rgba(255,0,0,0.4);
-}
-
-/* ===== FOOTER ===== */
-footer{
-padding:25px;
-text-align:center;
-background:black;
-opacity:0.6;
+/* MOBILE */
+@media(max-width:600px){
+h1{font-size:32px;}
+.logo{width:220px;}
 }
 
 </style>
@@ -142,89 +111,90 @@ opacity:0.6;
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-<div class="overlay"></div>
-
-<div class="content">
+<div class="overlay">
 
 <img src="logo.png" class="logo">
 
 <h1>XI JINPING COIN</h1>
 
-<p class="description">
-AI Culture • Blockchain Innovation • Community Driven Movement<br>
-Building a powerful digital ecosystem powered by people.
-</p>
-
-<a class="button" href="https://x.com/jinpingxi_coin?s=21" target="_blank">FOLLOW ON X</a>
-<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">JOIN COMMUNITY</a>
+<div class="description">
+Community-driven AI & crypto project focused on long-term growth,
+strong community and ecosystem expansion.
+</div>
 
 <div class="counter">
-🔥 <span id="members">12438</span> COMMUNITY MEMBERS
+👥 <span id="supporters">128</span> Early Supporters Joined
 </div>
-
-</div>
-</section>
 
 <!-- ABOUT -->
-<section class="section">
-<h2>PROJECT VISION</h2>
+<div class="section">
+<h2>About The Project</h2>
 
-<div class="box">
-XI JINPING COIN is a community-focused digital project combining
-AI narrative, blockchain culture and viral internet energy.
-The goal is to grow an engaged global community and expand
-into a long-term decentralized ecosystem driven by supporters.
+<p>
+XI JINPING COIN is a community-powered crypto initiative combining
+AI narrative, meme culture and blockchain innovation.
+The website will continue improving daily as the project evolves.
+</p>
+
+<p>
+Early supporters are helping build the foundation of the ecosystem
+from the very beginning.
+</p>
 </div>
-
-</section>
 
 <!-- ROADMAP -->
-<section class="section">
-<h2>DEVELOPMENT PHASE</h2>
+<div class="section">
+<h2>Roadmap</h2>
 
-<div class="box">
-Phase 1 — Community Growth & Awareness<br>
-Phase 2 — Website & Branding Expansion<br>
-Phase 3 — Deployment & Ecosystem Launch<br>
-Phase 4 — Partnerships & Exchange Expansion
+<p>✅ Phase 1 — Website Launch</p>
+<p>🚀 Phase 2 — Community Growth</p>
+<p>⚙️ Phase 3 — Deploy Preparation</p>
+<p>🌍 Phase 4 — Ecosystem Expansion</p>
+
 </div>
 
-</section>
+<!-- DEPLOY -->
+<div class="section">
+<h2>Project Deploy & Support</h2>
 
-<!-- DEPLOY SUPPORT -->
-<section class="section">
-<h2>DEPLOY SUPPORT</h2>
+<p>
+The project is currently in deployment preparation.
+Community support accelerates development and future launch stages.
+</p>
 
-<div class="box support">
-The project is currently preparing for deployment and technical expansion.
+<p><b>Support Wallet (SOL):</b></p>
 
-Community support helps cover infrastructure costs,
-development tools, deployment services and ecosystem growth.
-
-Every contribution directly accelerates the launch process
-and helps build a stronger foundation for the project.
-</div>
-
-<div class="box">
-<b>Support Address:</b><br><br>
+<p style="word-break:break-all;">
 BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
+</p>
+
 </div>
 
-</section>
+<!-- COMMUNITY -->
+<div class="section">
+<h2>Join Community</h2>
 
-<footer>
-© 2025 XI JINPING COIN — Community Powered Project
-</footer>
+<a class="button" href="https://x.com/jinpingxi_coin" target="_blank">
+Twitter (X)
+</a>
 
+<br><br>
+
+<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">
+Community
+</a>
+
+</div>
+
+</div>
+
+<!-- FAKE LIVE COUNTER EFFECT -->
 <script>
-let num = 12438;
+let count = 128;
 setInterval(()=>{
-num += Math.floor(Math.random()*2);
-document.getElementById("members").innerText =
-num.toLocaleString();
-},4000);
+count += Math.floor(Math.random()*2);
+document.getElementById("supporters").innerText = count;
+},6000);
 </script>
 
 </body>
