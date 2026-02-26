@@ -34,15 +34,20 @@ padding:40px 20px;
 width:320px;
 max-width:90%;
 margin-bottom:5px;
-animation:logoGlow 3s ease-in-out infinite;
+animation:
+logoGlow 3s ease-in-out infinite,
+logoRotate 25s linear infinite;
+transform-origin:center;
 }
-
 @keyframes logoGlow{
 0%{filter:drop-shadow(0 0 10px gold);}
 50%{filter:drop-shadow(0 0 35px gold);}
 100%{filter:drop-shadow(0 0 10px gold);}
 }
-
+@keyframes logoRotate{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
 /* TITLE */
 h1{
 font-size:52px;
