@@ -26,14 +26,19 @@ perspective:900px;
 }
 
 /* LOGO 3D MONETA */
+/* LOGO — SIMPLE LEFT ROTATION */
 .logo{
 width:320px;
 max-width:90%;
 margin-bottom:5px;
-animation: logoGlow 3s ease-in-out infinite, coinSpin 10s linear infinite;
-transform-style:preserve-3d;
+animation: logoGlow 3s ease-in-out infinite, logoRotateLeft 18s linear infinite;
+transform-origin:center;
 }
 
+@keyframes logoRotateLeft{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(-360deg);} /* sukasi į kairę */
+}
 @keyframes logoGlow{
 0%{filter:drop-shadow(0 0 12px gold);}
 50%{filter:drop-shadow(0 0 45px gold);}
