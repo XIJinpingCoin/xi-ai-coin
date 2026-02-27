@@ -25,24 +25,18 @@ padding:40px 20px;
 perspective:900px;
 }
 
-/* LOGO */
 .logo{
 width:320px;
 max-width:90%;
 margin-bottom:5px;
-animation: logoGlow 3s ease-in-out infinite, coinSpin 10s linear infinite;
+animation: logoGlow 3s ease-in-out infinite,
+coinSpin 18s linear infinite;
 transform-style:preserve-3d;
-}
-
-@keyframes logoGlow{
-0%{filter:drop-shadow(0 0 12px gold);}
-50%{filter:drop-shadow(0 0 45px gold);}
-100%{filter:drop-shadow(0 0 12px gold);}
 }
 
 @keyframes coinSpin{
 0%{transform:rotateY(0deg);}
-100%{transform:rotateY(360deg);}
+100%{transform:rotateY(-360deg);}
 }
 
 /* TITLE */
