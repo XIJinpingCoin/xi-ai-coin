@@ -24,26 +24,24 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* LOGO (TIK SUTVARKYTAS SUKIMAS) */
+/* LOGO — ORIGINAL SIZE + SMOOTH SPIN */
 .logo{
 width:320px;
 max-width:90%;
 margin-bottom:5px;
-animation: logoGlow 3s ease-in-out infinite,
-coinSpin 18s linear infinite;
-transform-style:preserve-3d;
+animation: logoGlow 3s ease-in-out infinite, coinSpin 18s linear infinite;
 }
 
 @keyframes logoGlow{
-0%{filter:drop-shadow(0 0 10px gold);}
-50%{filter:drop-shadow(0 0 35px gold);}
-100%{filter:drop-shadow(0 0 10px gold);}
+0%{filter:drop-shadow(0 0 12px gold);}
+50%{filter:drop-shadow(0 0 45px gold);}
+100%{filter:drop-shadow(0 0 12px gold);}
 }
 
-/* sukasi vietoje į kairę kaip coin */
+/* sukasi vietoje į kairę */
 @keyframes coinSpin{
-0%{transform:rotateY(0deg);}
-100%{transform:rotateY(-360deg);}
+from{transform:rotate(0deg);}
+to{transform:rotate(-360deg);}
 }
 
 /* TITLE */
@@ -94,6 +92,23 @@ transition:0.3s;
 
 .section:hover{
 box-shadow:0 0 25px rgba(255,215,0,0.25);
+}
+
+.button{
+display:inline-block;
+margin-top:15px;
+padding:12px 22px;
+background:gold;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:0.2s;
+}
+
+.button:hover{
+opacity:0.85;
+box-shadow:0 0 15px gold;
 }
 
 .counter{
@@ -155,12 +170,6 @@ display:flex;
 justify-content:space-between;
 padding:14px 18px;
 border-bottom:1px solid rgba(255,255,255,0.08);
-animation:fadeIn 0.6s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(10px);}
-to{opacity:1; transform:translateY(0);}
 }
 
 .donation-row span{
@@ -176,7 +185,7 @@ color:#FFD700;
 
 /* PARTNERS */
 .partners{
-margin-top:25px;
+margin-top:20px;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
@@ -196,7 +205,7 @@ transition:0.35s;
 
 @keyframes partnerGlow{
 0%{box-shadow:0 0 10px rgba(255,215,0,0.3);}
-50%{box-shadow:0 0 40px rgba(255,215,0,0.8);}
+50%{box-shadow:0 0 40px rgba(255,215,0,0.85);}
 100%{box-shadow:0 0 10px rgba(255,215,0,0.3);}
 }
 
@@ -210,6 +219,12 @@ margin-top:60px;
 font-size:14px;
 color:#999;
 opacity:0.8;
+}
+
+@media(max-width:600px){
+h1{font-size:32px;}
+.logo{width:220px;}
+.partner-logo{width:110px;height:110px;}
 }
 </style>
 </head>
@@ -240,14 +255,25 @@ strong community and ecosystem expansion.
 </div>
 
 <!-- FUNDING -->
+<div class="section">
+<h2>🚀 Deployment & Community Support</h2>
+
 <div class="funding-box">
-<div class="funding-text">45 SOL raised out of 100 SOL</div>
+<p><b>Community Funding Progress</b></p>
+
 <div class="progress-bar">
 <div class="progress-fill" id="progressFill"></div>
+</div>
+
+<p class="funding-text">
+Raised: 45 SOL / Goal: 100 SOL
+</p>
 </div>
 </div>
 
 <!-- DONATIONS -->
+<div class="section">
+<h2>💎 Recent Community Support</h2>
 <div class="donation-table" id="donationTable">
 <div class="donation-row header">
 <span>Supporter</span>
@@ -255,40 +281,24 @@ strong community and ecosystem expansion.
 <span>Network</span>
 </div>
 </div>
-
-<!-- PARTNERS -->
-<div class="section">
-<h2>🤝 Our Partners</h2>
-<div class="partners">
-<img src="partner1.jpeg" class="partner-logo">
-<img src="partner2.jpeg" class="partner-logo">
-<img src="partner3.jpeg" class="partner-logo">
-<img src="partner4.jpeg" class="partner-logo">
-</div>
-</div>
-
-<div class="footer">
-Official Community • XI JINPING COIN © 2025
 </div>
 
 </div>
 
 <script>
-
-// supporters counter
 let count = 128;
 setInterval(()=>{
 count += Math.floor(Math.random()*2);
 document.getElementById("supporters").innerText = count;
 },6000);
 
-// funding progress (45 SOL)
+/* ✅ FUNDING NOW 45 SOL */
 const raised = 45;
 const goal = 100;
 const percent = (raised/goal)*100;
 document.getElementById("progressFill").style.width = percent+"%";
 
-// live donations small amounts
+/* LIVE DONATIONS SMALL AMOUNTS */
 const donationTable = document.getElementById('donationTable');
 
 const dummyDonations = [
@@ -304,7 +314,6 @@ const donation = dummyDonations[Math.floor(Math.random()*dummyDonations.length)]
 
 const row = document.createElement('div');
 row.classList.add('donation-row');
-
 row.innerHTML =
 `<span>${donation.supporter}</span>
 <span>${donation.amount}</span>
@@ -315,9 +324,7 @@ donationTable.appendChild(row);
 if(donationTable.children.length > 8){
 donationTable.removeChild(donationTable.children[1]);
 }
-
 },6000);
-
 </script>
 
 </body>
