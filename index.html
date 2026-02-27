@@ -32,8 +32,9 @@ max-width:90%;
 margin-bottom:5px;
 animation:
 logoGlow 3s ease-in-out infinite,
-coinSpinLeft 14s linear infinite; /* PRIDĖTA — gražus lėtas sukimas */
+coinSpinLeft 10s linear infinite;
 transform-style:preserve-3d;
+backface-visibility:hidden;
 will-change:transform;
 }
 
@@ -45,8 +46,15 @@ will-change:transform;
 
 /* PRIDĖTA — stabilus 3D coin spin į KAIRĘ */
 @keyframes coinSpinLeft{
-0%{transform:rotateY(0deg);}
-100%{transform:rotateY(-360deg);}
+0%{
+transform:rotateY(0deg) translateZ(0px);
+}
+50%{
+transform:rotateY(-180deg) translateZ(25px);
+}
+100%{
+transform:rotateY(-360deg) translateZ(0px);
+}
 }
 
 /* TITLE */
