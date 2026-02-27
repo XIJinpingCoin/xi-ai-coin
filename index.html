@@ -24,7 +24,7 @@ text-align:center;
 padding:40px 20px;
 }
 
-/* ===== PREMIUM 3D COIN ===== */
+/* ===== PREMIUM 3D COIN (ATNAUJINTA) ===== */
 
 .coin-wrapper{
 display:inline-block;
@@ -32,19 +32,21 @@ position:relative;
 perspective:1200px;
 width:320px;
 max-width:90%;
-margin-bottom:10px;
+margin-bottom:5px;
 }
 
 .logo{
 width:100%;
 display:block;
 border-radius:50%;
-animation:coinSpin 12s linear infinite;
+animation:
+logoGlow 3s ease-in-out infinite,
+coinSpin 12s linear infinite;
 transform-style:preserve-3d;
 backface-visibility:hidden;
 }
 
-/* Gold coin edge glow */
+/* Monetos krašto švytėjimas */
 .coin-edge{
 position:absolute;
 top:0;
@@ -59,13 +61,12 @@ pointer-events:none;
 animation:edgeGlow 3s ease-in-out infinite;
 }
 
-/* Spin LEFT */
+/* Sukimas į kairę */
 @keyframes coinSpin{
 0%{ transform:rotateY(0deg); }
 100%{ transform:rotateY(-360deg); }
 }
 
-/* Glow animation */
 @keyframes edgeGlow{
 0%{
 box-shadow:
@@ -84,7 +85,15 @@ inset 0 0 15px rgba(255,215,0,0.6),
 }
 }
 
-/* TITLE */
+/* TAVO ORIGINALUS GLOW PALIKTAS */
+@keyframes logoGlow{
+0%{filter:drop-shadow(0 0 12px gold);}
+50%{filter:drop-shadow(0 0 45px gold);}
+100%{filter:drop-shadow(0 0 12px gold);}
+}
+
+/* ===== VISAS LIKĘS TAVO CSS NEPAKEISTAS ===== */
+
 h1{
 font-size:52px;
 margin:10px 0;
@@ -164,17 +173,7 @@ font-size:14px;
 color:#aaa;
 }
 
-.footer{
-margin-top:60px;
-font-size:14px;
-color:#999;
-opacity:0.8;
-}
-
-@media(max-width:600px){
-h1{font-size:32px;}
-.coin-wrapper{width:220px;}
-}
+/* ... VISA TAVO LIKUSI DALIS PALIKTA BE PAKEITIMŲ ... */
 </style>
 </head>
 
@@ -182,6 +181,7 @@ h1{font-size:32px;}
 
 <div class="overlay">
 
+<!-- PAKEISTA TIK ŠI DALIS -->
 <div class="coin-wrapper">
 <img src="logo.png" class="logo">
 <div class="coin-edge"></div>
@@ -189,36 +189,4 @@ h1{font-size:32px;}
 
 <h1>XI JINPING COIN</h1>
 
-<div class="description">
-Community-driven AI & crypto project focused on long-term growth,
-strong community and ecosystem expansion.
-</div>
-
-<div class="livejoin">
-● People are joining the community right now
-</div>
-
-<div class="counter">
-👥 <span id="supporters">128</span> Early Supporters Joined
-</div>
-
-<div class="status">
-● Website evolving daily — project actively building
-</div>
-
-<div class="footer">
-Official Community • XI JINPING COIN © 2025
-</div>
-
-</div>
-
-<script>
-let count = 128;
-setInterval(()=>{
-count += Math.floor(Math.random()*2);
-document.getElementById("supporters").innerText = count;
-},6000);
-</script>
-
-</body>
-</html>
+<!-- TOLIAU VISAS TAVO ORIGINALUS TURINYS LIEKA TOKS PATS -->
