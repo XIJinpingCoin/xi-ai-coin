@@ -25,24 +25,36 @@ padding:40px 20px;
 perspective:900px;
 }
 
-/* LOGO 3D MONETA */
-/* LOGO — SIMPLE LEFT ROTATION */
+/* LOGO — PREMIUM FLOAT + ROTATE */
 .logo{
 width:320px;
 max-width:90%;
 margin-bottom:5px;
-animation: logoGlow 3s ease-in-out infinite, logoRotateLeft 18s linear infinite;
+animation:
+logoGlow 3s ease-in-out infinite,
+logoRotateLeft 22s linear infinite,
+logoFloat 6s ease-in-out infinite;
 transform-origin:center;
 }
 
-@keyframes logoRotateLeft{
-0%{transform:rotate(0deg);}
-100%{transform:rotate(-360deg);} /* sukasi į kairę */
-}
+/* švelnus glow */
 @keyframes logoGlow{
 0%{filter:drop-shadow(0 0 12px gold);}
-50%{filter:drop-shadow(0 0 45px gold);}
+50%{filter:drop-shadow(0 0 35px gold);}
 100%{filter:drop-shadow(0 0 12px gold);}
+}
+
+/* lėtas sukimasis į kairę */
+@keyframes logoRotateLeft{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(-360deg);}
+}
+
+/* lengvas plaukiojimas */
+@keyframes logoFloat{
+0%{translate:0px 0px;}
+50%{translate:0px -12px;}
+100%{translate:0px 0px;}
 }
 
 @keyframes coinSpin{
