@@ -238,15 +238,39 @@ h1{font-size:32px;}
 }
 </style>
 </head>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'en',
+includedLanguages: 'en,zh-CN',
+autoDisplay: false
+}, 'google_translate_element');
+}
 
+function changeLanguage(lang) {
+const select = document.querySelector(".goog-te-combo");
+if (select) {
+select.value = lang;
+select.dispatchEvent(new Event("change"));
+}
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <body>
 
 <div class="overlay">
-
+<div id="google_translate_element" style="display:none;"></div>
 <img src="logo.png" class="logo">
 
 <h1>XI JINPING COIN</h1>
-
+<div style="margin-top:10px;">
+<select id="languageSwitcher" onchange="changeLanguage(this.value)"
+style="padding:8px 12px;border-radius:6px;font-weight:bold;">
+<option value="en">English</option>
+<option value="zh-CN">中文</option>
+</select>
+</div>
 <div class="description">
 Community-driven AI & crypto project focused on long-term growth,
 strong community and ecosystem expansion.
