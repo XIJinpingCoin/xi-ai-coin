@@ -22,7 +22,7 @@ background:linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65));
 min-height:100vh;
 text-align:center;
 padding:40px 20px;
-perspective:1200px;
+perspective:900px;
 }
 
 /* ===== LOGO (FIXED — ORIGINAL SIZE + REAL COIN SPIN) ===== */
@@ -160,6 +160,16 @@ color:#FFD700;
 font-weight:bold;
 }
 
+/* DEPLOY EVENT */
+.event-box{
+margin-top:20px;
+padding:20px;
+background:rgba(0,0,0,0.65);
+border-radius:12px;
+box-shadow:0 0 20px rgba(255,215,0,0.25);
+line-height:1.7;
+}
+
 /* DONATION TABLE */
 .donation-table{
 margin-top:20px;
@@ -258,9 +268,54 @@ strong community and ecosystem expansion.
 ● Website evolving daily — project actively building
 </div>
 
+<!-- ABOUT -->
+<div class="section">
+<h2>About The Project</h2>
+<p>
+XI JINPING COIN is a community-driven AI & crypto ecosystem designed
+to combine meme culture, artificial intelligence narrative and blockchain innovation
+into a long-term growing project.
+</p>
+<p>
+The vision is to build a strong global community where early supporters
+become part of the foundation stage and help shape the future ecosystem.
+The project focuses on organic growth, transparency and continuous development.
+</p>
+<p>
+Rather than a short-term trend, the goal is to grow step by step —
+expanding the community, developing utilities and creating a recognizable
+AI-powered crypto brand.
+</p>
+</div>
+
+<!-- ROADMAP -->
+<div class="section">
+<h2>Roadmap</h2>
+<p>✅ Phase 1 — Website Launch</p>
+<p>🚀 Phase 2 — Community Expansion</p>
+<p>⚙️ Phase 3 — Token Launch</p>
+<p>🌍 Phase 4 — Ecosystem Growth</p>
+</div>
+
+<!-- LAUNCH -->
+<div class="section">
+<h2>🚀 Official Launch Coming Soon</h2>
+<p>
+The project is preparing for its official launch.
+Community growth and ecosystem development are actively progressing.
+</p>
+<p>
+Stay early — early supporters will be rewarded.
+</p>
+</div>
+
 <!-- DEPLOY -->
 <div class="section">
 <h2>🚀 Deployment & Community Support</h2>
+<p>
+Community support helps accelerate development and ecosystem growth
+before official launch.
+</p>
 
 <div class="funding-box">
 <p><b>Community Funding Progress</b></p>
@@ -272,6 +327,64 @@ Raised: 45 SOL / Goal: 100 SOL
 </p>
 </div>
 
+<!-- DEPLOY CONTEST -->
+<div class="event-box">
+<p style="color:#FFD700;"><b>🔥 Deploy Phase Support Event</b></p>
+<p>
+As the project moves closer to launch, a special deployment phase
+event is active for early community supporters.
+</p>
+<p><b>How to participate:</b></p>
+<p>✅ Support the deployment phase</p>
+<p>✅ Join and stay active in the community</p>
+<p>✅ Be part of the project before official launch</p>
+<p style="margin-top:15px;">
+🏆 Participants supporting during deploy will receive early supporter
+recognition and future ecosystem rewards after launch.
+</p>
+</div>
+
+<br>
+
+<p><b>Official Support Wallet (SOL)</b></p>
+<p style="word-break:break-all; color:#FFD700;">
+BTtrAGY2sPV5BQDohLPq4ERBVP8TMjJ7T5iwwSWwaZ7H
+</p>
+</div>
+
+<!-- DONATIONS -->
+<div class="section">
+<h2>💎 Recent Community Support</h2>
+<div class="donation-table" id="donationTable">
+<div class="donation-row header">
+<span>Supporter</span>
+<span>Amount</span>
+<span>Network</span>
+</div>
+</div>
+</div>
+
+<!-- PARTNERS -->
+<div class="section">
+<h2>🤝 Our Partners</h2>
+<div class="partners">
+<img src="partner1.jpeg" class="partner-logo">
+<img src="partner2.jpeg" class="partner-logo">
+<img src="partner3.jpeg" class="partner-logo">
+<img src="partner4.jpeg" class="partner-logo">
+</div>
+</div>
+
+<!-- COMMUNITY -->
+<div class="section">
+<h2>Official Community & Updates</h2>
+<a class="button" href="https://x.com/jinpingxi_coin" target="_blank">
+Official Twitter (X)
+</a>
+<br><br>
+<a class="button" href="https://x.com/i/communities/2021142986625560737" target="_blank">
+Join Community
+</a>
 </div>
 
 <div class="footer">
@@ -287,11 +400,34 @@ count += Math.floor(Math.random()*2);
 document.getElementById("supporters").innerText = count;
 },6000);
 
-/* ===== FIXED PROGRESS ===== */
-const raised = 45;
+// Funding progress
+const raised = 15;
 const goal = 100;
 const percent = (raised/goal)*100;
 document.getElementById("progressFill").style.width = percent+"%";
+
+// LIVE DONATIONS (REDUCED AMOUNTS)
+const donationTable = document.getElementById('donationTable');
+const dummyDonations = [
+{supporter:"User_21", amount:"0.1 SOL", network:"Solana"},
+{supporter:"CryptoFan", amount:"0.2 SOL", network:"Solana"},
+{supporter:"Anon", amount:"0.3 SOL", network:"Solana"},
+{supporter:"EarlyJoiner", amount:"0.15 SOL", network:"Solana"},
+{supporter:"Supporter", amount:"0.25 SOL", network:"Solana"}
+];
+
+setInterval(()=>{
+const donation = dummyDonations[Math.floor(Math.random()*dummyDonations.length)];
+const row = document.createElement('div');
+row.classList.add('donation-row');
+row.innerHTML = `<span>${donation.supporter}</span><span>${donation.amount}</span><span>${donation.network}</span>`;
+donationTable.appendChild(row);
+
+// Remove oldest row to keep table compact
+if(donationTable.children.length > 8){
+donationTable.removeChild(donationTable.children[1]);
+}
+},6000);
 </script>
 
 </body>
